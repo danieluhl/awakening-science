@@ -1,14 +1,18 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { StopPage } from '../stop/StopPage'
+import stopCss from '../stop/stop.css?url'
 
-export const Route = createFileRoute('/')({ component: Home })
-
-function Home() {
-  return (
-    <div className="p-8">
-      <h1 className="text-4xl font-bold">Welcome to TanStack Start</h1>
-      <p className="mt-4 text-lg">
-        Edit <code>src/routes/index.tsx</code> to get started.
-      </p>
-    </div>
-  )
-}
+export const Route = createFileRoute('/')({
+  head: () => ({
+    meta: [{ title: 'Unbound · Stop' }],
+    links: [
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;600&display=swap',
+      },
+      { rel: 'stylesheet', href: stopCss },
+    ],
+  }),
+  component: StopPage,
+})
