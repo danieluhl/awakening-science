@@ -101,10 +101,18 @@ export function mountStop(): () => void {
   // hold to begin
   const hold = $('hold'), prog = $('prog') as unknown as SVGCircleElement
   let raf = 0, t0 = 0
-  function holdStart(e: PointerEvent) { e.preventDefault(); t0 = performance.now(); const loop = (now: number) => { const p = Math.min(1, (now - t0) / 1600); prog.style.strokeDashoffset = String(289 * (1 - p)); if (p < 1) raf = frame(loop); else enter() }; raf = frame(loop) }
-  function holdEnd() { cancelAnimationFrame(raf); prog.style.transition = 'stroke-dashoffset .5s'; prog.style.strokeDashoffset = '289'; later(() => { prog.style.transition = '' }, 500) }
+  // once the ring is full it stays full: it turns gold, blooms softly, and then the page opens
+  let held = false
+  function complete() {
+    if (held) return; held = true; cancelAnimationFrame(raf)
+    prog.style.transition = ''; prog.style.strokeDashoffset = '0'
+    hold.classList.add('done'); hold.setAttribute('aria-disabled', 'true')
+    later(enter, 1100)
+  }
+  function holdStart(e: PointerEvent) { e.preventDefault(); if (held) return; t0 = performance.now(); const loop = (now: number) => { const p = Math.min(1, (now - t0) / 1600); prog.style.strokeDashoffset = String(289 * (1 - p)); if (p < 1) raf = frame(loop); else complete() }; raf = frame(loop) }
+  function holdEnd() { if (held) return; cancelAnimationFrame(raf); prog.style.transition = 'stroke-dashoffset .5s'; prog.style.strokeDashoffset = '289'; later(() => { if (!held) prog.style.transition = '' }, 500) }
   hold.onpointerdown = holdStart; hold.onpointerup = holdEnd; hold.onpointerleave = holdEnd
-  hold.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') enter() }
+  hold.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); prog.style.transition = 'stroke-dashoffset .9s ease'; prog.style.strokeDashoffset = '0'; later(complete, 900) } }
   let entered = false
   function enter() {
     if (entered) return; entered = true

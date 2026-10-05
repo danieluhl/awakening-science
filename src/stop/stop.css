@@ -50,6 +50,16 @@ body{color:var(--ink);font-family:Manrope,sans-serif;font-weight:300;overflow:hi
 .hold svg{position:absolute;inset:0;transform:rotate(-90deg)}
 .hold circle{fill:none;stroke:var(--ink);stroke-width:1.2}
 .hold .prog{stroke-width:2.4;stroke-dasharray:289;stroke-dashoffset:289}
+/* complete: the ring stays full, turns gold and gives off one slow, soft bloom */
+.hold circle{transition:stroke 1.2s ease,opacity 1.2s ease}
+.hold.done{cursor:default}
+.hold.done circle{stroke:#c98f1c}
+.hold.done span:last-child{color:#a8761a;transition:color 1.2s ease}
+.hold::after{content:"";position:absolute;inset:-6px;border-radius:50%;pointer-events:none;opacity:0;
+  background:radial-gradient(circle,rgba(246,198,110,.55) 0%,rgba(246,198,110,.22) 45%,rgba(246,198,110,0) 70%)}
+.hold.done::after{animation:bloom 2.4s ease-out forwards}
+@keyframes bloom{0%{opacity:0;transform:scale(.8)}35%{opacity:1}100%{opacity:0;transform:scale(1.9)}}
+@keyframes bloom-still{0%{opacity:0}35%{opacity:1}100%{opacity:0}}
 .hold .breath{position:absolute;inset:30px;border-radius:50%;background:var(--ink);opacity:.12;animation:breath 6s ease-in-out infinite}
 @keyframes breath{50%{transform:scale(2.2);opacity:.04}}
 .small-print{position:absolute;bottom:26px;left:0;right:0;font-size:11px;letter-spacing:.14em;color:var(--soft);text-transform:uppercase}
@@ -171,6 +181,7 @@ body{color:var(--ink);font-family:Manrope,sans-serif;font-weight:300;overflow:hi
 /* Reduce Motion: keep the soft fades (they don't move anything), drop the movement */
 @media (prefers-reduced-motion:reduce){
   .bg,.hold .breath,.realbtn .q-mark{animation:none}
+  .hold.done::after{animation:bloom-still 2.4s ease-out forwards}
   .step,.step.on,.real .card,.realbtn,.chatter span.in{transform:none!important}
 }
 
