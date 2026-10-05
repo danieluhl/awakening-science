@@ -1,4 +1,4 @@
-/* Concept #5 "Stop" — ported verbatim from design-concepts/5-stop/index.html */
+/* Concept #5 "Stop": the page styles */
 @property --a{syntax:'<color>';inherits:true;initial-value:#f6d5c4}
 @property --b{syntax:'<color>';inherits:true;initial-value:#c9c2ef}
 @property --c{syntax:'<color>';inherits:true;initial-value:#f3efe6}

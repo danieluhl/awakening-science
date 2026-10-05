@@ -1,4 +1,4 @@
-// Generated from data/site-data.json + content/*.md (via design-concepts/data.js).
+// Built from data/site-data.json + content/*.md. This file is now the source of truth for the Stop page.
 // The shape below covers the fields the Stop page reads; the rest is kept for later pages.
 
 export interface Quote { text: string; by?: string; source?: string; work?: string; translator?: string; note?: string }

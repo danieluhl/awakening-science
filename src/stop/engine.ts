@@ -1,4 +1,4 @@
-// The Stop page's behaviour, ported from design-concepts/5-stop/index.html.
+// The Stop page's behaviour.
 // It drives the static shell rendered by <StopPage>, and returns a cleanup
 // function that stops every timer, frame loop and listener it started.
 import { REAL as R } from './real'

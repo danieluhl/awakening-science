@@ -2,18 +2,6 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "design-concepts",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": [
-        "-m",
-        "http.server",
-        "4747",
-        "--directory",
-        "design-concepts"
-      ],
-      "port": 4747
-    },
-    {
       "name": "app",
       "runtimeExecutable": "npx",
       "runtimeArgs": [

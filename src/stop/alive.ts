@@ -1,7 +1,7 @@
 // A barely-there living layer: a slow WebGL colour field, rare sparkle patterns,
 // and an occasional shimmer across a word. Everything here is meant to go unnoticed
 // most of the time, and to delight when it is noticed.
-// Ported from design-concepts/5-stop/alive.js; returns a cleanup function.
+// Returns a cleanup function.
 
 const FRAGMENT = `
   precision highp float;
