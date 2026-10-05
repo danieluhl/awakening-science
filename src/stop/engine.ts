@@ -9,7 +9,7 @@ const esc = (s: unknown) =>
   String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c] as string)
 const PAL = [['#f6d5c4','#c9c2ef','#f3efe6'],['#ffd1b8','#a8d8ff','#f4efe7'],['#cfe7ff','#e6e1ff','#f2f4f7'],['#ffe7b3','#f7c6d9','#f6f1e6'],['#c9f2dc','#ffd6a8','#f3f4ec'],['#e4dcff','#ffe0ec','#f5f2f7'],['#ffd9c2','#ffe9b8','#f8f3ea'],['#ffffff','#f6e3c9','#f7f3ec']]
 const STEPS = ['Try', 'Inside', 'The ancestor', 'Behind']
-const THOUGHTS = ['did I reply to that email','what will they think','I should be better at this','later I need to','am I doing this right','remember when','what if it doesn’t work','I’m not there yet','this isn’t it','tomorrow','what does this say about me','one more thing','I need to get somewhere','almost','not like last time']
+const THOUGHTS = ['did I reply to that email','what will they think','I should be better at this','later I need to','am I doing this right','remember when','what if it doesn’t work','I’m not there yet','this isn’t it','tomorrow','what does this say about me','one more thing','I need to get somewhere','almost','not like last time','why did I say that','I should call them back','is this working yet','what time is it','I forgot to','they probably think','when this is over','I’m wasting time','if only I had','what’s for dinner','maybe next time','I can’t stop thinking about it','how long does this last','am I supposed to do something']
 const STATES: [number, string][] = [[0,'narrating'],[.18,'planning, replaying'],[.36,'noticing the noise'],[.52,'hearing, seeing'],[.68,'resting'],[.84,'just this']]
 const MAX = 50
 
