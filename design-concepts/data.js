@@ -1,0 +1,917 @@
+// Generated from data/site-data.json + content/*.md
+window.SITE = {
+ "project": {
+  "title": "Unbound: First-Person Awakening Meets Neuroscience",
+  "concept": "An interactive, explorative website where visitors click through first-person experiences of non-dual awareness and flip each card to the neuroscience behind it."
+ },
+ "experiences": [
+  {
+   "id": "no-one-home",
+   "title": "No one home",
+   "subtitle": "selflessness, the end of the narrator",
+   "first_person": {
+    "description": "The running commentary — the 'me' that remembers, plans, rehearses, and narrates — goes silent. Not suppressed: simply absent. Preferences remain, choices still get made, but the self woven through them is gone.",
+    "quotes": [
+     {
+      "text": "You'll never get anyone who's had no-self realization to tell you what that self was that went away — because it's not anything.",
+      "by": "Angelo DiLullo",
+      "source": "BatGap interview transcript"
+     },
+     {
+      "text": "Preferences are there, but the seeming self woven into all of it is what's gone… Choices are made — but if I'm really accurate, it's almost like the whole environment just makes the choice. It's a self-propagating, self-responsive environment.",
+      "by": "Angelo DiLullo",
+      "source": "BatGap interview transcript"
+     },
+     {
+      "text": "After liberation, identity is essentially dissolved into presence.",
+      "by": "Angelo DiLullo",
+      "source": "BatGap interview transcript"
+     }
+    ]
+   },
+   "dogen": {
+    "quotes": [
+     {
+      "text": "To study the buddha way is to study the self. To study the self is to forget the self. To forget the self is to be actualized by myriad things. When actualized by myriad things, your body and mind as well as the bodies and minds of others drop away.",
+      "work": "Genjōkōan",
+      "translator": "Kaz Tanahashi"
+     },
+     {
+      "text": "Body and mind of themselves will drop away, and your original face will be manifest.",
+      "work": "Fukanzazengi",
+      "translator": "Carl Bielefeldt"
+     }
+    ],
+    "note": "Eight hundred years before the DMN was named, the same report: the self is something that can be forgotten, and what remains is not absence but actualization."
+   },
+   "science": {
+    "summary": "The brain's 'narrator' lives largely in the default mode network (DMN) — posterior cingulate cortex and medial prefrontal cortex — which runs self-referential thought and mental time travel. It deactivates in experienced meditators, the PCC quieting in the deepest states.",
+    "findings": [
+     {
+      "text": "DMN deactivation in experienced meditators, PCC quieting in deepest states (Brewer et al., 2011, PNAS).",
+      "source": "Brewer et al. 2011"
+     },
+     {
+      "text": "7T fMRI of an adept through insight stages: self-related regions (mPFC, temporal poles) deactivate; equanimity correlates with reduced mPFC/PCC activity (Yang et al., 2025).",
+      "source": "Yang et al. 2025"
+     },
+     {
+      "text": "REBUS: high-level priors — including the prior 'I am a particular person with a past and future' — relax their grip (Carhart-Harris & Friston, 2019).",
+      "source": "Carhart-Harris & Friston 2019"
+     },
+     {
+      "text": "The self-model is layered: narrative self (DMN) can dissolve while embodied self persists, or vice versa (Letheby & Gerrans, 2017).",
+      "source": "Letheby & Gerrans 2017"
+     }
+    ]
+   },
+   "practice": {
+    "title": "Self-inquiry",
+    "instruction": "Sit quietly and wait for the next thought — watch so precisely you catch it arising. Ask: 'For whom does this thought arise?' Notice the gap between the assumed thinker and the thought."
+   },
+   "related": [
+    "the-wall-comes-down",
+    "effortless-being"
+   ],
+   "sources": [
+    "Brewer et al. 2011 (PNAS)",
+    "Yang et al. 2025 (NeuroImage)",
+    "Carhart-Harris & Friston 2019 (REBUS)",
+    "Letheby & Gerrans 2017",
+    "BatGap interview transcript"
+   ]
+  },
+  {
+   "id": "the-wall-comes-down",
+   "title": "The wall comes down",
+   "subtitle": "inner/outer non-duality, intimacy with everything",
+   "first_person": {
+    "description": "The felt division between 'me in here' and 'world out there' collapses — not as an idea but as perception. The sense of distance thins; intimacy with everything becomes pronounced.",
+    "quotes": [
+     {
+      "text": "The thing about non-dual perception is it really does look different. The sense of distance and space can be almost non-existent; the sense of intimacy is much more pronounced… You can still see how the mind tries to put things together in a subject-object way, but there's no identity taking itself from that. So it's just a thought. It's like watching a picture on a screen.",
+      "by": "Angelo DiLullo",
+      "source": "BatGap interview transcript"
+     },
+     {
+      "text": "Me as that cup, me as that keyboard, me as that book — when identity drops away, you see that it actually was an illusion… You literally experience all of that as totally non-separate. And there's not an awareness apart from an experiencing. It's that close. It's that intimate.",
+      "by": "Angelo DiLullo",
+      "source": "BatGap interview transcript"
+     },
+     {
+      "text": "Subjectification is the movement in consciousness to create a subject and an object. When it stops happening, then you could call that unbound consciousness.",
+      "by": "Angelo DiLullo",
+      "source": "ZDoggMD 'Awakening, Explained Ep. 2'"
+     }
+    ]
+   },
+   "dogen": {
+    "quotes": [
+     {
+      "text": "To carry the self forward and illuminate myriad things is delusion. That myriad things come forth and illuminate the self is awakening.",
+      "work": "Genjōkōan",
+      "translator": "Kaz Tanahashi"
+     },
+     {
+      "text": "When you see forms or hear sounds, fully engaging body-and-mind, you intuit dharma intimately.",
+      "work": "Genjōkōan",
+      "translator": "Kaz Tanahashi"
+     }
+    ],
+    "note": "The direction of illumination reverses: not the self reaching out to the world, but the world arriving as the self. Intimacy as the signature of non-separation — exactly Angelo's 'that close, that intimate.'"
+   },
+   "science": {
+    "summary": "The brain normally runs two systems in opposition — intrinsic (self-related, inward) and extrinsic (task/world-oriented) — which are anticorrelated. During non-dual-awareness meditation specifically, the anticorrelation breaks down: both stay active simultaneously.",
+    "findings": [
+     {
+      "text": "Non-dual-awareness meditation breaks down intrinsic/extrinsic network anticorrelation — both systems stay active at once (Josipovic et al., 2012).",
+      "source": "Josipovic et al. 2012"
+     },
+     {
+      "text": "The central precuneus network (central precuneus + dlPFC, dACC, dmPFC, IPL) couples with both intrinsic and extrinsic systems — proposed integrative neural correlate of non-dual awareness (Josipovic, 2024).",
+      "source": "Josipovic 2024"
+     },
+     {
+      "text": "The salience network (anterior insula, dACC) does the opposite: it monitors and increases intrinsic/extrinsic segregation (Josipovic, 2024).",
+      "source": "Josipovic 2024"
+     }
+    ]
+   },
+   "practice": {
+    "title": "Sound as gateway",
+    "instruction": "Walking, washing dishes, anywhere — put your attention fully into sound with 100% of your attention, not differentiating, just sound as sound. Notice how sound 'is completely all-encompassing and leaves no room for separation.'"
+   },
+   "related": [
+    "no-one-home",
+    "no-edges"
+   ],
+   "sources": [
+    "Josipovic et al. 2012 (Front. Hum. Neurosci.)",
+    "Josipovic 2024 (Front. Psychol.)",
+    "BatGap transcript; ZDoggMD Ep. 2"
+   ]
+  },
+  {
+   "id": "no-edges",
+   "title": "No edges",
+   "subtitle": "spacelessness, boundlessness",
+   "first_person": {
+    "description": "Space itself — the felt sense of being located somewhere, with the world at a distance — thins or vanishes. What remains is boundless and edgeless.",
+    "quotes": [
+     {
+      "text": "The undifferentiated or the unconditioned — undifferentiated aliveness, not blankness or bare awareness. It's more like the substance of substancelessness from which substance arises.",
+      "by": "Angelo DiLullo",
+      "source": "Simply Always Awake",
+      "note": "secondhand transcription; treat as near-verbatim"
+     },
+     {
+      "text": "There can be realized this experience of a sort of formless, aware space — but it's not so much a space, and it feels as if everything sort of appears out of it and disappears back into it… to hold awareness as some kind of final state, stage, background, or ground of experience — you're holding on to subtle conceptualities without realizing it.",
+      "by": "Angelo DiLullo",
+      "source": "third-party notes",
+      "note": "secondhand transcription; flag on site"
+     }
+    ]
+   },
+   "dogen": {
+    "quotes": [
+     {
+      "text": "Enlightenment is like the moon reflected on the water. The moon does not get wet, nor is the water broken… Enlightenment does not divide you, just as the moon does not break the water… Each reflection, however long or short its duration, manifests the vastness of the dewdrop, and realizes the limitlessness of the moonlight in the sky.",
+      "work": "Genjōkōan",
+      "translator": "Kaz Tanahashi"
+     },
+     {
+      "text": "When you find your place where you are, practice occurs, actualizing the fundamental point… for the place, the way, is neither large nor small, neither yours nor others.",
+      "work": "Genjōkōan",
+      "translator": "Kaz Tanahashi"
+     }
+    ],
+    "note": "Traditional reading: moon = enlightenment, water = the person — a non-duality teaching."
+   },
+   "science": {
+    "summary": "The felt sense of where you are is constructed mainly by parietal cortex and the temporoparietal junction (TPJ). Deep meditation quiets the parietal 'orientation area'; TPJ beta oscillations track graded self-boundary dissolution — and at maximum dissolution, the phenomenological category of time vanishes too.",
+    "findings": [
+     {
+      "text": "SPECT of meditators in deep states: decreased superior parietal activity ('orientation association area'), inversely related to frontal attention increases — accompanying 'the sense of no space and no time' (Newberg et al., 2001).",
+      "source": "Newberg et al. 2001"
+     },
+     {
+      "text": "Right-lateralized beta oscillations in TPJ + medial parietal cortex tracked self-boundary dissolution grade in an expert meditator (Dor-Ziderman et al., 2016).",
+      "source": "Dor-Ziderman et al. 2016"
+     },
+     {
+      "text": "Preregistered replication (N=46): high-beta (21–30 Hz) suppression in frontoparietal/posterior-medial cortices in 'full dissolvers' (Trautwein et al., 2024).",
+      "source": "Trautwein et al. 2024"
+     },
+     {
+      "text": "Focal stimulation of the right angular gyrus elicited out-of-body experiences — self-location is causal, not just correlational (Blanke et al., 2002, Nature).",
+      "source": "Blanke et al. 2002"
+     }
+    ]
+   },
+   "practice": {
+    "title": "Where is the boundary?",
+    "instruction": "Sit and notice the felt boundary of 'you' — usually drawn at the skin. Ask: where, exactly, does hearing end and the hearer begin? Let the question stay open rather than answering it."
+   },
+   "related": [
+    "the-wall-comes-down",
+    "the-eternal-now"
+   ],
+   "sources": [
+    "Newberg et al. 2001",
+    "Blanke et al. 2002 (Nature)",
+    "Lenggenhager et al. 2007 (Science)",
+    "Ionta et al. 2011 (Neuron)",
+    "Dor-Ziderman et al. 2016",
+    "Trautwein et al. 2024 (J. Neurosci.)"
+   ]
+  },
+  {
+   "id": "the-eternal-now",
+   "title": "The eternal now",
+   "subtitle": "timelessness",
+   "first_person": {
+    "description": "Past and future drop out — not forgotten, but revealed as constructions. What remains is a vivid, edgeless present.",
+    "quotes": [
+     {
+      "text": "Awakening is not an event. It's not even a thing. There is only life, and life knows no boundary, no separation, no time.",
+      "by": "Angelo DiLullo",
+      "source": "Awake: It's Your Turn (via Goodreads quotes)"
+     },
+     {
+      "text": "What are you when you don't think about yourself, or your past, or your future?… You find yourself in a space with no past and no future… The sounds haven't gone anywhere, have they? The colors and shapes in front of you are still there. In fact, they are a bit more vivid, aren't they?… Yet there is no story, no past, no future, no 'substance' of what you always thought of as you.",
+      "by": "Angelo DiLullo",
+      "source": "Awake: It's Your Turn (via Goodreads quotes)"
+     },
+     {
+      "text": "For a photon, a massless photon, it experiences time as eternity, right?… There's also no distance… Right, but we believe our thoughts over proven science.",
+      "by": "Angelo DiLullo",
+      "source": "ZDoggMD 'Awakening, Explained Ep. 2'",
+      "note": "flagged as experiential, not a scientific claim"
+     }
+    ]
+   },
+   "dogen": {
+    "quotes": [
+     {
+      "text": "'For the time being' here means time itself is being, and all being is time.",
+      "work": "Uji",
+      "translator": "Dan Welch & Kazuaki Tanahashi"
+     },
+     {
+      "text": "The way the self arrays itself is the form of the entire world. See each thing in this entire world as a moment of time… This is the understanding that the self is time.",
+      "work": "Uji",
+      "translator": "Dan Welch & Kazuaki Tanahashi"
+     },
+     {
+      "text": "Firewood becomes ash, and it does not become firewood again. Yet, do not suppose that the ash is after and the firewood before… Birth is an expression complete this moment. Death is an expression complete this moment.",
+      "work": "Genjōkōan",
+      "translator": "Kaz Tanahashi"
+     }
+    ],
+    "note": "Dōgen doesn't place you in time; time is what you are."
+   },
+   "science": {
+    "summary": "Subjective time is built, not given: the insula translates body signals into felt duration; in active-inference models, ego dissolution is a collapse in the 'temporal thickness' of the self-model. Meditation speeds felt time and reduces attention to it while leaving the inner clock (metronome timing) unchanged.",
+    "findings": [
+     {
+      "text": "Posterior insula activation climbs with stimulus duration; right anterior insula dilates felt time, left contracts it (Pollatos et al., 2014).",
+      "source": "Pollatos et al. 2014"
+     },
+     {
+      "text": "Ego dissolution = collapse of the 'temporal thickness' of the self-model via lowered precision on high-level priors (Deane, 2020).",
+      "source": "Deane 2020"
+     },
+     {
+      "text": "22 highly experienced meditators: meditation made body boundaries less salient, reduced attention to time, sped felt time — metronome timing unchanged (Linares Gutiérrez et al., 2022).",
+      "source": "Linares Gutiérrez et al. 2022"
+     },
+     {
+      "text": "'Nowness' itself is a form of temporal experience — minimal phenomenal experience suspends time representation itself (Metzinger, 2020).",
+      "source": "Metzinger 2020"
+     }
+    ]
+   },
+   "practice": {
+    "title": "Locate the past",
+    "instruction": "Close your eyes for 60 seconds and locate 'the past.' Not memories of the past — the past itself, as a present-moment experience. Notice what's actually there: thoughts about then, arising now."
+   },
+   "related": [
+    "no-edges",
+    "no-one-home"
+   ],
+   "sources": [
+    "Pollatos et al. 2014 (PLoS ONE)",
+    "Deane 2020 (Philos. Mind Sci.)",
+    "Metzinger 2020",
+    "Gamma & Metzinger 2021 (PLoS ONE)",
+    "Linares Gutiérrez et al. 2022 (Biology)",
+    "Hajnal et al. 2026 (The Cerebellum)"
+   ]
+  },
+  {
+   "id": "more-real-than-real",
+   "title": "More real than real",
+   "subtitle": "vividness, clarity, 'suchness'",
+   "first_person": {
+    "description": "As the self thins, the world gets clearer — colors, sounds, textures arrive with startling immediacy. A litmus test for genuine recognition.",
+    "quotes": [
+     {
+      "text": "It doesn't need a litmus test once this really clarifies.",
+      "by": "Angelo DiLullo",
+      "source": "BatGap interview transcript"
+     },
+     {
+      "text": "Literally everything was pure conscious being… It was so much more real than real. It was self-obvious and self-validating.",
+      "by": "Angelo DiLullo",
+      "source": "BatGap interview transcript"
+     },
+     {
+      "text": "What replaced this world of thought, struggle, and suffering, was boundless clarity and intimacy with all immediate textures of phenomena.",
+      "by": "Angelo DiLullo",
+      "source": "Simply Always Awake bio"
+     }
+    ]
+   },
+   "dogen": {
+    "quotes": [
+     {
+      "text": "It is the presence of things as they are.",
+      "work": "Fukanzazengi",
+      "translator": "Cleary-based rendering",
+      "note": "widely-repeated rendering; flag as such"
+     },
+     {
+      "text": "Think of not-thinking. How do you think of not-thinking? Nonthinking. This in itself is the essential art of zazen.",
+      "work": "Fukanzazengi",
+      "translator": "Norman Waddell & Masao Abe"
+     }
+    ],
+    "note": "Scholars gloss hishiryō (non-thinking) as a prereflective, non-conceptual vividness — 'pure presence of things as they are' — not blankness."
+   },
+   "science": {
+    "summary": "Predictive-processing models explain the paradox: relax high-level priors and sensory data floods through with higher precision — the world looks brighter because the brain stops painting over it with expectations.",
+    "findings": [
+     {
+      "text": "Open Presence (non-dual) vs. focused attention: increased sensory monitoring and reduced perceptual inferences — relaxed prior-formation (Fucci et al., 2018).",
+      "source": "Fucci et al. 2018"
+     },
+     {
+      "text": "Expert meditators keep 'the gate more open': lower prestimulus alpha, lower decision criterion — relying less on priors, more on data (Mylius et al., 2025).",
+      "source": "Mylius et al. 2025"
+     },
+     {
+      "text": "Practices form a continuum relinquishing increasingly engrained habits of prediction 'until all conceptual processing falls away, unveiling a state of pure awareness' (Laukkonen & Slagter, 2021).",
+      "source": "Laukkonen & Slagter 2021"
+     },
+     {
+      "text": "Advanced meditation reduces the 'stickiness' of prior predictions, processing at earlier, rawer levels of the hierarchy (Yang et al., 2025).",
+      "source": "Yang et al. 2025"
+     }
+    ]
+   },
+   "practice": {
+    "title": "The vividness experiment",
+    "instruction": "Look at any object for 30 seconds. First notice the labels the mind pastes on ('cup, white, mine'). Then drop the labels and meet the raw visual texture."
+   },
+   "related": [
+    "the-wall-comes-down",
+    "the-ground-of-being"
+   ],
+   "sources": [
+    "Carhart-Harris & Friston 2019 (REBUS)",
+    "Fucci et al. 2018 (Neuropsychologia)",
+    "Mylius et al. 2025 (Psychophysiology)",
+    "Laukkonen & Slagter 2021 (Neurosci. Biobehav. Rev.)",
+    "Yang et al. 2025 (NeuroImage)"
+   ]
+  },
+  {
+   "id": "effortless-being",
+   "title": "Effortless being",
+   "subtitle": "non-doing, the end of strain",
+   "first_person": {
+    "description": "The background effort of maintaining a self — managing, controlling, becoming — simply stops. Choices happen, but no one is pushing the river.",
+    "quotes": [
+     {
+      "text": "Life knows no separation. There is no strain. It flows effortlessly into existence, and dissolves without a trace just as effortlessly.",
+      "by": "Angelo DiLullo",
+      "source": "Awake: It's Your Turn (via Bookey quote index)"
+     },
+     {
+      "text": "Just stop, stop. Stop faking it. Stop imagining enlightenment. Stop thinking about the future. Stop trying to do anything. Just stop, stop, stop… It's really a very simple thing. It's a stopping… an act of pure being.",
+      "by": "Angelo DiLullo",
+      "source": "ZDoggMD 'Awakening, Explained Ep. 2'"
+     },
+     {
+      "text": "Non-doership is obvious… it's almost like the whole environment just makes the choice.",
+      "by": "Angelo DiLullo",
+      "source": "BatGap interview transcript"
+     }
+    ]
+   },
+   "dogen": {
+    "quotes": [
+     {
+      "text": "Do not think good or bad. Do not administer pros and cons. Cease all the movements of the conscious mind, the gauging of all thoughts and views. Have no designs on becoming a Buddha.",
+      "work": "Fukanzazengi",
+      "translator": "via Dōgen article rendering"
+     },
+     {
+      "text": "The Way is originally perfect and all-pervading. How could it be contingent on practice and realization? The true vehicle is self-sufficient. What need is there for special effort?",
+      "work": "Fukanzazengi",
+      "translator": "Carl Bielefeldt"
+     }
+    ],
+    "note": "Effortlessness as doctrine: there's nothing to become, so there's nothing to strain toward."
+   },
+   "science": {
+    "summary": "Real-time fMRI neurofeedback linked PCC deactivation to meditators' reports of 'effortless awareness' — with the authors' own caveat about demand characteristics. Phenomenological studies list 'passive agency' / 'non-doing' as a core category of boundary dissolution.",
+    "findings": [
+     {
+      "text": "PCC deactivation tracked 'effortless awareness' reports in real-time neurofeedback — suggestive, with flagged demand-characteristic caveats (Garrison et al., 2013).",
+      "source": "Garrison et al. 2013"
+     },
+     {
+      "text": "'Passive agency' — non-doing, formless attention through letting go — is a core category of boundary dissolution phenomenology (Nave et al., via Atad et al., 2025).",
+      "source": "Atad et al. 2025"
+     },
+     {
+      "text": "Meditation involves frontal control over early sensory processing (mPFC/PCC negativity at 160 ms) — the automatisms of selfing no longer firing (Kornmeier et al., 2019).",
+      "source": "Kornmeier et al. 2019"
+     }
+    ]
+   },
+   "practice": {
+    "title": "The Stop pointer",
+    "instruction": "Wherever you are: stop thinking, stop making anything, stop trying to get somewhere, stop trying to become something, stop trying to avoid something. Stop. Don't make stopping into a technique — just stop, once, completely."
+   },
+   "related": [
+    "no-one-home",
+    "the-click"
+   ],
+   "sources": [
+    "Garrison et al. 2013 (Front. Hum. Neurosci.) — with caveats",
+    "Atad et al. 2025",
+    "Kornmeier et al. 2019 (PLoS ONE)",
+    "ZDoggMD Ep. 2; Bookey quote index"
+   ]
+  },
+  {
+   "id": "the-ground-of-being",
+   "title": "The ground of being",
+   "subtitle": "undifferentiated aliveness, what remains",
+   "first_person": {
+    "description": "When self, time, and space fall away, what remains isn't blankness — it's a vivid, aware aliveness without edges or center.",
+    "quotes": [
+     {
+      "text": "It is when something vast and eternal steps forward into your conscious experience and recognizes itself in a very direct way.",
+      "by": "Angelo DiLullo",
+      "source": "Awake: It's Your Turn (via artemzen summary)"
+     },
+     {
+      "text": "Literally everything was pure conscious being… identity dissolved into it. There was no personal identity, there was a universal consciousness, an identity of pure being.",
+      "by": "Angelo DiLullo",
+      "source": "BatGap interview transcript"
+     },
+     {
+      "text": "The whole paradigm of identity and everything that has to do with identity just completely disappeared, and it never came back… There's just nothing there. But it's also not empty… this is home.",
+      "by": "Angelo DiLullo",
+      "source": "BatGap interview transcript"
+     }
+    ]
+   },
+   "dogen": {
+    "quotes": [
+     {
+      "text": "The Way is originally perfect and all-pervading… Indeed, the whole body is free from dust… your original face will be manifest.",
+      "work": "Fukanzazengi",
+      "translator": "Carl Bielefeldt"
+     },
+     {
+      "text": "No trace of realization remains, and this no-trace continues endlessly.",
+      "work": "Genjōkōan",
+      "translator": "Kaz Tanahashi"
+     }
+    ],
+    "note": "'Original face': the ground prior to parents, personality, ego — behind everything and everything at the same time."
+   },
+   "science": {
+    "summary": "The preregistered COGITATE adversarial collaboration (N=256) found sustained posterior cortical integration — a temporo-parieto-occipital 'hot zone' — decoded conscious contents at >95% accuracy, while prefrontal 'broadcast' reached ~70%. Pure awareness is marked by moment-to-moment signal unpredictability and slow coordinated distant activity — a state, not a trait.",
+    "findings": [
+     {
+      "text": "Posterior cortex decoded conscious contents at >95% accuracy across full stimulus duration; prefrontal ignition ~70% and temporally restricted (COGITATE Consortium, 2025, Nature).",
+      "source": "COGITATE Consortium 2025"
+     },
+     {
+      "text": "Non-dual awareness as 'the broadcast of the system's current ground state… the broadcast of its own broadcasting capacity' (Josipovic, 2024).",
+      "source": "Josipovic 2024"
+     },
+     {
+      "text": "Pure awareness: temporal entropy and aperiodic dynamics; classic alpha phase-coherence contributed least; state, not trait (Canales-Johnson et al., 2026).",
+      "source": "Canales-Johnson et al. 2026"
+     },
+     {
+      "text": "Boundary dissolution raises broadband Lempel-Ziv complexity — neural de-differentiation mirroring the psychedelic pattern (Atad et al., 2025).",
+      "source": "Atad et al. 2025"
+     },
+     {
+      "text": "'Selfiness' and 'perspectivalness' are contents of consciousness, not consciousness itself — from 500+ pure-consciousness reports across 57 countries (Metzinger, 2024).",
+      "source": "Metzinger 2024"
+     }
+    ]
+   },
+   "practice": {
+    "title": "Notice awareness itself",
+    "instruction": "Notice awareness itself — not what you're aware of, but the aware space in which sounds, sensations, and thoughts appear. 'What is this that is aware before, during, and after a thought?' Rest the question rather than answering it."
+   },
+   "related": [
+    "more-real-than-real",
+    "the-click"
+   ],
+   "sources": [
+    "COGITATE Consortium 2025 (Nature)",
+    "Josipovic 2024 (Front. Psychol.)",
+    "Canales-Johnson et al. 2026 (J. Cogn. Neurosci.)",
+    "Atad et al. 2025 (Hum. Brain Mapp.)",
+    "Metzinger 2024 (MIT Press)"
+   ]
+  },
+  {
+   "id": "the-click",
+   "title": "The click",
+   "subtitle": "the moment of recognition itself",
+   "first_person": {
+    "description": "Awakening is not an achievement but a recognition — sudden, obvious, self-validating. It can't be forced, but the ground can be prepared: 'like the tumblers are falling.'",
+    "quotes": [
+     {
+      "text": "Oh, this is what spiritual people are looking for.",
+      "by": "Angelo DiLullo",
+      "source": "BatGap interview transcript"
+     },
+     {
+      "text": "Oh, the container in which I've always been, is the being and the being is the thinking and the thinking is the thought, and everything I've ever thought about my life and the world is all the same stuff. It's pure unbound awakeness.",
+      "by": "Angelo DiLullo",
+      "source": "ZDoggMD 'Awakening, Explained Ep. 2'"
+     },
+     {
+      "text": "Every time you do that, like the tumblers are falling. And you can't control when an awakening happens. You can't decide it's going to happen now or later or whatever, but you can keep coming back to that place.",
+      "by": "Angelo DiLullo",
+      "source": "ZDoggMD 'Awakening, Explained Ep. 2'"
+     },
+     {
+      "text": "What drives the inquiry is the most important thing… your desire to wake up, your desperation with the suffering of life, your deep, deep yearning to know what's what.",
+      "by": "Angelo DiLullo",
+      "source": "ZDoggMD 'Awakening, Explained Ep. 2'"
+     }
+    ]
+   },
+   "dogen": {
+    "quotes": [
+     {
+      "text": "When buddhas are truly buddhas, they do not necessarily notice that they are buddhas. However, they are actualized buddhas, who go on actualizing buddha.",
+      "work": "Genjōkōan",
+      "translator": "Kaz Tanahashi"
+     }
+    ],
+    "note": "The honest tension: Dōgen's Sōtō framework deliberately dissolves the sudden breakthrough into ongoing practice-realization. Where Angelo describes a click — 'like the tumblers are falling' — Dōgen dissolves the before-and-after entirely: practice is realization."
+   },
+   "science": {
+    "summary": "No study has captured the 'click' of awakening itself — it is sudden, rare, and unplannable, the worst possible laboratory target. The closest science is about insight: Bayesian model reduction, rising gamma in integration hubs as non-duality deepens, and machine-decoded meditative depth.",
+    "findings": [
+     {
+      "text": "Meditative insight as Bayesian model reduction — the brain pruning redundant parameters, experienced as sudden clarity (Laukkonen & Slagter, 2021).",
+      "source": "Laukkonen & Slagter 2021"
+     },
+     {
+      "text": "Gamma-band activity rises in ACC, precuneus, and superior parietal lobule as non-duality deepens — integration hubs getting more active, not quieter (Brown et al., 2018).",
+      "source": "Brown et al. 2018"
+     },
+     {
+      "text": "Time-varying meditative depth decoded from EEG theta/alpha/gamma connectivity — while pre-selected DMN regions of interest 'fell short' (Reggente et al., 2025).",
+      "source": "Reggente et al. 2025"
+     }
+    ],
+    "honest_framing": "No study has captured the 'click' of awakening itself. Present this card as the frontier: the phenomenology is precise, the neuroscience is still catching up."
+   },
+   "practice": {
+    "title": "Nothing to try",
+    "instruction": "Nothing to try — that's the point. But you can orient: 'Your will to awaken is what matters… orient to that part of yourself that knows there's a more real, authentic, undivided way to experience reality. And trust it.'"
+   },
+   "related": [
+    "effortless-being",
+    "no-one-home"
+   ],
+   "sources": [
+    "Laukkonen & Slagter 2021",
+    "Brown et al. 2018 (Conscious. Cogn.)",
+    "Reggente et al. 2025 (Biol. Psychiatry Glob. Open Sci.)",
+    "ZDoggMD Ep. 2"
+   ]
+  }
+ ],
+ "angelos_stages": [
+  {
+   "name": "Awakening",
+   "description": "The first shift in identity (stream-entry / Kensho). Subject-object in consciousness collapses; 'I am everything' / pure 'amness.'"
+  },
+  {
+   "name": "Honeymoon",
+   "description": "You feel like there are no boundaries anywhere, non-doership is obvious, it's wonderful. Lasts weeks to months, sometimes years."
+  },
+  {
+   "name": "Contraction / shadow work",
+   "description": "Expansion gives way to contraction: repressed emotion surfaces and is felt more directly than before — 'a different kind of worse.' Normal."
+  },
+  {
+   "name": "Non-dual perception",
+   "description": "The subject-object construct dissolves in the sense world itself: 'you start to truly experience non-duality — not experiencing the division between you and everything else.'"
+  },
+  {
+   "name": "Liberation",
+   "description": "When the sense of self in all its forms — all the selfing mechanisms — dissolve or drop away. 'That's the end of personal suffering because it's the end of personal anything.'"
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Unbound consciousness",
+   "definition": "Consciousness no longer bound by subject-object division. 'When subjectification… stops happening, then you could call that unbound consciousness.'"
+  },
+  {
+   "term": "Subjectification",
+   "definition": "The movement in consciousness to create a subject and an object… so fundamental to our functioning… it's impossible to imagine what it's like without that operating."
+  },
+  {
+   "term": "Pristine, undivided nature",
+   "definition": "His central noun phrase for what we are (from Awake's subtitle/description)."
+  },
+  {
+   "term": "Perceptual distortion / perceptual filters",
+   "definition": "His framing device: awakening = 'recognizing and reversing the ways in which we habitually reject life at various levels through perceptual distortion.'"
+  },
+  {
+   "term": "Me-ing and Being",
+   "definition": "Verb-form for the post-awakening flip-flop between selfing activity and pure being."
+  },
+  {
+   "term": "Transmission",
+   "definition": "Three kinds: (1) relational — hearing someone's description can 'induce and encourage similar processes in you'; (2) direct pointing — 'using language very purposefully to induce experiential insight'; (3) 'you can learn various strategies and inquiries to investigate directly for yourself.'"
+  },
+  {
+   "term": "Honeymoon / Contraction",
+   "definition": "Phases of the post-awakening arc (see stages)."
+  },
+  {
+   "term": "Beliefs as nested layers",
+   "definition": "One belief is based on a deeper, more fundamental hidden belief that acts as your operating system. Deepest: 'I am a separate self in the world of objects.'"
+  }
+ ],
+ "dogen": {
+  "who": "Eihei Dōgen Zenji (1200–1253) — Japanese Zen master, founder of the Sōtō school in Japan and Eihei-ji monastery. Awakened when his teacher Rujing declared 'body and mind dropped off' (shinjin datsuraku). Major work: Shōbōgenzō (95 fascicles).",
+  "doctrine": "Practice and realization are one (shushō): zazen is not a means to a later awakening; sitting is enlightenment actualizing itself.",
+  "role_on_site": "The ancestor voice — the deep-time anchor: Dōgen described the same territory 800 years ago from inside a monastery; Angelo describes it from inside a modern life.",
+  "key_fascicles": [
+   {
+    "name": "Genjōkōan",
+    "gloss": "Actualizing the Fundamental Point — forgetting the self, firewood and ash, the moon in water."
+   },
+   {
+    "name": "Uji",
+    "gloss": "The Time-Being — time itself is being; all being is time."
+   },
+   {
+    "name": "Sansuikyō",
+    "gloss": "Mountains and Waters Sutra — mountains and waters as the sutra itself."
+   },
+   {
+    "name": "Fukanzazengi",
+    "gloss": "Zazen instructions: dropping off body and mind, non-thinking (hishiryō)."
+   },
+   {
+    "name": "Bendōwa",
+    "gloss": "Practice-realization (shushō ittō) as doctrine."
+   }
+  ],
+  "quotes_count": 16,
+  "translator_credits": [
+   "Kaz Tanahashi",
+   "Dan Welch & Kazuaki Tanahashi",
+   "Gudo Nishijima & Chodo Cross",
+   "Norman Waddell & Masao Abe",
+   "Carl Bielefeldt",
+   "Thomas Cleary"
+  ]
+ },
+ "experience_brain_region_links": [
+  {
+   "experience_id": "no-one-home",
+   "regions": [
+    {
+     "name": "Posterior cingulate cortex (PCC)",
+     "role": "quiets — narrative self goes silent"
+    },
+    {
+     "name": "Medial prefrontal cortex (mPFC)",
+     "role": "quiets — autobiographical self-model relaxes"
+    },
+    {
+     "name": "Default mode network",
+     "role": "deactivates — top of predictive hierarchy relaxes"
+    }
+   ]
+  },
+  {
+   "experience_id": "the-wall-comes-down",
+   "regions": [
+    {
+     "name": "Intrinsic/extrinsic networks",
+     "role": "anticorrelation breaks down — both stay active"
+    },
+    {
+     "name": "Central precuneus network",
+     "role": "couples with both systems — integrative correlate of non-duality"
+    },
+    {
+     "name": "Salience network (insula, dACC)",
+     "role": "does the reverse — increases segregation"
+    }
+   ]
+  },
+  {
+   "experience_id": "no-edges",
+   "regions": [
+    {
+     "name": "Superior parietal lobule",
+     "role": "quiets — 'orientation area' offline, no-space sense"
+    },
+    {
+     "name": "Temporoparietal junction (TPJ)",
+     "role": "beta tracks dissolution grade — self-location dissolves"
+    }
+   ]
+  },
+  {
+   "experience_id": "the-eternal-now",
+   "regions": [
+    {
+     "name": "Insula",
+     "role": "body-to-time translation loosens"
+    },
+    {
+     "name": "Cerebellum / basal ganglia",
+     "role": "timing loops; temporal thickness of self-model collapses"
+    }
+   ]
+  },
+  {
+   "experience_id": "more-real-than-real",
+   "regions": [
+    {
+     "name": "Predictive hierarchy",
+     "role": "high-level priors relax — sensory data arrives with higher precision"
+    },
+    {
+     "name": "Somatosensory cortex (alpha)",
+     "role": "lower prestimulus alpha — the gate stays open"
+    }
+   ]
+  },
+  {
+   "experience_id": "effortless-being",
+   "regions": [
+    {
+     "name": "Posterior cingulate cortex (PCC)",
+     "role": "deactivation tracks 'effortless awareness'"
+    },
+    {
+     "name": "mPFC/PCC",
+     "role": "early (160 ms) frontal negativity — automatisms of selfing stop firing"
+    }
+   ]
+  },
+  {
+   "experience_id": "the-ground-of-being",
+   "regions": [
+    {
+     "name": "Posterior cortical hot zone",
+     "role": "sustained integration — decodes contents at >95% (COGITATE)"
+    },
+    {
+     "name": "Broadband cortical complexity",
+     "role": "Lempel-Ziv complexity rises — neural de-differentiation"
+    }
+   ]
+  },
+  {
+   "experience_id": "the-click",
+   "regions": [
+    {
+     "name": "ACC / precuneus / superior parietal lobule",
+     "role": "gamma rises as non-duality deepens"
+    },
+    {
+     "name": "Theta/alpha/gamma connectivity",
+     "role": "decodes time-varying meditative depth"
+    }
+   ]
+  }
+ ],
+ "edges": [
+  [
+   "no-one-home",
+   "the-wall-comes-down",
+   "self → world division"
+  ],
+  [
+   "no-one-home",
+   "effortless-being",
+   "self → strain"
+  ],
+  [
+   "the-wall-comes-down",
+   "no-edges",
+   "division → space"
+  ],
+  [
+   "the-wall-comes-down",
+   "more-real-than-real",
+   "division → vividness"
+  ],
+  [
+   "no-edges",
+   "the-eternal-now",
+   "space ↔ time co-dissolve"
+  ],
+  [
+   "the-eternal-now",
+   "no-one-home",
+   "time ↔ self co-dissolve"
+  ],
+  [
+   "more-real-than-real",
+   "the-ground-of-being",
+   "vividness → what remains"
+  ],
+  [
+   "effortless-being",
+   "the-click",
+   "stopping → recognition"
+  ],
+  [
+   "the-ground-of-being",
+   "the-click",
+   "ground → recognition"
+  ],
+  [
+   "the-click",
+   "no-one-home",
+   "recognition → no-self; the loop closes"
+  ]
+ ],
+ "limits": [
+  [
+   "Correlation, not causation",
+   "Nearly every finding is correlational. Nothing here proves a brain event causes non-dual awareness, or the reverse."
+  ],
+  [
+   "The hard problem is untouched",
+   "No study explains why integrated posterior activity, beta suppression, or relaxed priors should feel like anything at all."
+  ],
+  [
+   "Tiny samples of rare people",
+   "One adept at 7T. One 20,000-hour meditator in MEG. 22, 33, 34 experts. Experts differ from the rest of us in unknown ways."
+  ],
+  [
+   "Demand characteristics",
+   "Meditators know what the study is about. One participant revised her report to match the feedback graph."
+  ],
+  [
+   "The reportability paradox",
+   "The instrument, a reporting self, is exactly what the state dissolves. Standard scales miss the phenomenon."
+  ],
+  [
+   "Construct validity is unsettled",
+   "Non-dual awareness, pure consciousness, minimal phenomenal experience, cessation: distinct constructs? Not yet enough data."
+  ],
+  [
+   "The psychedelic analogy is partial",
+   "Same machinery is the honest framing. Same state is not."
+  ],
+  [
+   "No lab has captured the click",
+   "Sudden, rare, unplannable: the worst possible laboratory target. The neuroscience is still catching up."
+  ]
+ ],
+ "bottom_line": "The brain data and the first-person reports are pointing at the same territory from opposite sides. Neither side owns it.",
+ "angelo": {
+  "name": "Angelo DiLullo, MD",
+  "bio": "Board-certified physician near Denver. Founder of Simply Always Awake (~986 podcast episodes). Author of Awake: It's Your Turn (2021). Awakened at 24 across two consecutive nights after devising his own self-inquiry.",
+  "origin": "I don't know how this is going to happen for me, but this is going to happen for me, if it kills me."
+ },
+ "map_note": "Angelo warns that both over- and under-emphasizing stages are ways of “distancing ourselves from life.” A rough sketch, not a ladder.",
+ "field_notes": [
+  "Don't try to recreate your awakening. It will never happen. The past is gone.",
+  "Be prepared to feel rather unenlightened for some time. This is shadow work; it cannot be avoided.",
+  "Don't ever compare your own experience to anything I've said or anyone said. Your immediate experience is the best thing there to wake you up — just as it is.",
+  "Look for a teacher that doesn't want anything from you at all."
+ ]
+};

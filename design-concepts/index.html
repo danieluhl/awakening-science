@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unbound · Five Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f1ea;--ink:#1a1816;--soft:#6f6a61;--line:#d9d3c7;--card:#fffdf8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121110;--ink:#efe9de;--soft:#9b948a;--line:#2d2a26;--card:#1a1917}}
+:root[data-theme="dark"]{--bg:#121110;--ink:#efe9de;--soft:#9b948a;--line:#2d2a26;--card:#1a1917}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:Inter,sans-serif;font-size:15px;line-height:1.6}
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px}
+header{padding:90px 0 50px}
+.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--soft)}
+h1{font-family:Fraunces;font-weight:300;font-size:clamp(44px,7vw,92px);line-height:1;letter-spacing:-.02em;margin:14px 0 18px}
+h1 i{font-style:italic}
+.lede{max-width:62ch;font-size:17px;color:var(--soft)}
+.grid{display:grid;gap:40px;margin:40px 0 80px}
+.concept{display:grid;grid-template-columns:1.25fr 1fr;gap:34px;align-items:center;padding-top:40px;border-top:1px solid var(--line)}
+.concept:nth-child(even) .frame{order:2}
+.frame{position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 30px 60px -30px rgba(0,0,0,.45);display:block}
+.frame iframe{position:absolute;top:0;left:0;width:250%;height:250%;transform:scale(.4);transform-origin:0 0;border:0;pointer-events:none}
+.frame .open{position:absolute;right:14px;bottom:14px;background:rgba(255,255,255,.92);color:#111;text-decoration:none;font-size:12px;font-weight:500;padding:8px 14px;border-radius:30px}
+.frame:hover .open{background:#fff}
+.num{font-family:Fraunces;font-weight:300;font-size:64px;line-height:1;color:var(--soft)}
+h2{font-family:Fraunces;font-weight:600;font-size:34px;line-height:1.1;margin:6px 0 4px}
+.tag{font-family:Fraunces;font-style:italic;font-size:19px;color:var(--soft);margin-bottom:14px}
+.concept p{margin-bottom:12px}
+dl{display:grid;grid-template-columns:110px 1fr;gap:6px 14px;margin-top:14px;font-size:13.5px}
+dt{color:var(--soft);font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding-top:2px}
+.go{display:inline-block;margin-top:16px;color:var(--ink);font-weight:500;text-decoration:none;border-bottom:1px solid var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:20px 0 40px}
+th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);font-weight:500}
+td:first-child{font-family:Fraunces;font-size:17px;white-space:nowrap}
+.tablewrap{overflow-x:auto}
+h3{font-family:Fraunces;font-weight:300;font-size:40px;margin-top:20px}
+.notes{max-width:70ch;color:var(--soft);padding-bottom:100px}
+.notes li{margin:8px 0 8px 18px}
+@media (max-width:860px){.concept{grid-template-columns:1fr}.concept:nth-child(even) .frame{order:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Unbound · first-person awakening meets neuroscience</div>
+    <h1>Five ways to<br><i>hold the same territory.</i></h1>
+    <p class="lede">Five working prototypes, each built from the real copy in <code>content/</code> and <code>data/site-data.json</code>: all eight experiences, Angelo's and Dōgen's quotes with translators, the brain-region links, the five-stage map and the honest limits. Every concept keeps the site's core move: the inside and the behind-the-scenes of one experience, side by side.</p>
+  </header>
+
+  <div class="grid">
+    <article class="concept">
+      <a class="frame" href="1-enso/index.html"><iframe src="1-enso/index.html" loading="lazy" tabindex="-1" title="Ensō preview"></iframe><span class="open">Open ↗</span></a>
+      <div>
+        <div class="num">01</div><h2>Ensō</h2><div class="tag">Sumi ink on washi paper</div>
+        <p>A brushed ensō draws itself on load, and the eight experiences sit around the circle in the order of the site's navigation graph. The circle never quite closes, a nod to "the loop closes" at The click. Opening one unrolls a hanging scroll with three voices: 今 the modern teacher, 古 the ancestor, 脳 behind the scenes.</p>
+        <dl><dt>Mood</dt><dd>Quiet, reverent, Zen. Dōgen leads.</dd><dt>Signature</dt><dd>Animated brushstroke, vermilion seals, a stage map drawn as ensō that open wider at each stage.</dd><dt>Trade-off</dt><dd>The most traditional. It could read as "a Buddhism site" more than a science one.</dd></dl>
+        <a class="go" href="1-enso/index.html">Open Ensō →</a>
+      </div>
+    </article>
+
+    <article class="concept">
+      <a class="frame" href="2-two-sides/index.html"><iframe src="2-two-sides/index.html" loading="lazy" tabindex="-1" title="Two Sides preview"></iframe><span class="open">Open ↗</span></a>
+      <div>
+        <div class="num">02</div><h2>Two Sides</h2><div class="tag">Candlelight on the left, lab instruments on the right</div>
+        <p>The bottom line, "pointing at the same territory from opposite sides", built as the interface. A draggable seam splits the screen into a warm first-person half and a cold oscilloscope half. Each experience gets its own animated instrument: beta suppressing in the TPJ, intrinsic and extrinsic networks falling into phase, Lempel-Ziv complexity rising, and a flat dashed line for The click, which no lab has captured. Dōgen scrolls past underneath like a ticker from 800 years ago.</p>
+        <dl><dt>Mood</dt><dd>Cinematic, a little dramatic, very "science".</dd><dt>Signature</dt><dd>Drag the seam to favour either side. A ⚠ Honest limits drawer.</dd><dt>Trade-off</dt><dd>The scopes are illustrative schematics, labelled as such. Making them data-driven would need real figures.</dd></dl>
+        <a class="go" href="2-two-sides/index.html">Open Two Sides →</a>
+      </div>
+    </article>
+
+    <article class="concept">
+      <a class="frame" href="3-constellation/index.html"><iframe src="3-constellation/index.html" loading="lazy" tabindex="-1" title="Constellation preview"></iframe><span class="open">Open ↗</span></a>
+      <div>
+        <div class="num">03</div><h2>Constellation</h2><div class="tag">A night sky you can navigate</div>
+        <p>The eight experiences are stars, and the connections from the content doc ("space ↔ time co-dissolve", "ground → recognition") are the constellation lines, which light up with their labels on hover. Choosing a star zooms the sky toward it and a card rises that literally flips: one face is the experience, the other is the neuroscience. Angelo's stages become moon phases, with Contraction as a dim waning moon.</p>
+        <dl><dt>Mood</dt><dd>Wonder, exploration, vastness.</dd><dt>Signature</dt><dd>Zoom-to-star, 3D card flip (the original "flip each card" brief, taken literally).</dd><dt>Trade-off</dt><dd>The most "delightful" at first touch, but stars and space are a familiar metaphor.</dd></dl>
+        <a class="go" href="3-constellation/index.html">Open Constellation →</a>
+      </div>
+    </article>
+
+    <article class="concept">
+      <a class="frame" href="4-field-atlas/index.html"><iframe src="4-field-atlas/index.html" loading="lazy" tabindex="-1" title="Field Atlas preview"></iframe><span class="open">Open ↗</span></a>
+      <div>
+        <div class="num">04</div><h2>Field Atlas</h2><div class="tag">A risograph print magazine</div>
+        <p>A bold editorial take: misregistered pink and blue riso type, a generative motif per entry (a clock with no hands for The eternal now, lock tumblers for The click), and each experience as a two-page spread. The right page carries a schematic brain figure with the linked regions pulsing. Red-pencil marginalia ("n = 1", "authors flag demand characteristics!") sit next to the findings they qualify, so the honest limits live inline instead of in a footnote. An "Errata" appendix closes it.</p>
+        <dl><dt>Mood</dt><dd>Smart, confident, editorial, playful.</dd><dt>Signature</dt><dd>Brain figures, red-pencil caveats, Dōgen in a "from the archive" box.</dd><dt>Trade-off</dt><dd>Long scroll. The brain figure is schematic, not anatomical.</dd></dl>
+        <a class="go" href="4-field-atlas/index.html">Open Field Atlas →</a>
+      </div>
+    </article>
+
+    <article class="concept">
+      <a class="frame" href="5-stop/index.html"><iframe src="5-stop/index.html" loading="lazy" tabindex="-1" title="Stop preview"></iframe><span class="open">Open ↗</span></a>
+      <div>
+        <div class="num">05</div><h2>Stop.</h2><div class="tag">A site that practises what it describes</div>
+        <p>It opens gently on “Just this.” and a hold-to-enter button. Faint narrator thoughts (“am I doing this right”, “tomorrow”) drift across the screen. A full-width <b>Me-ing ↔ Being</b> river runs along the bottom, choppy and dark on one side and calm and gold on the other. Dragging along it dissolves the thoughts and the interface while the colours grow more vivid. Each experience starts with a guided minute that resets the river to the middle and lets it drift toward Being. Only then do the quote, the ancestor, the brain and a “But is this real?” research card open up.</p>
+        <dl><dt>Mood</dt><dd>Calm, experiential, intimate.</dd><dt>Signature</dt><dd>The UI performs the experience: the narrator fades and the world gets vivid.</dd><dt>Trade-off</dt><dd>The most opinionated. It puts practice before information, which won't suit a reader who wants the science fast.</dd></dl>
+        <a class="go" href="5-stop/index.html">Open Stop →</a>
+      </div>
+    </article>
+  </div>
+
+  <h3>At a glance</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Concept</th><th>Navigation</th><th>Inside ↔ Behind</th><th>Dōgen</th><th>Limits</th><th>Best if the site should feel…</th></tr></thead>
+    <tbody>
+      <tr><td>Ensō</td><td>Points on a brushed circle</td><td>Three voice tabs in a scroll panel</td><td>Equal voice (古 tab)</td><td>Own section</td><td>Contemplative, rooted in tradition</td></tr>
+      <tr><td>Two Sides</td><td>Channel strip, ← → keys</td><td>Literal split screen with a drag seam</td><td>Ticker along the bottom</td><td>Slide-out drawer + per-page caveat</td><td>Rigorous, cinematic, science-forward</td></tr>
+      <tr><td>Constellation</td><td>Stars + graph edges</td><td>3D card flip</td><td>Voice toggle on the front</td><td>Own section</td><td>Exploratory, full of wonder</td></tr>
+      <tr><td>Field Atlas</td><td>TOC tiles, scroll</td><td>Two-page spread with brain figure</td><td>"From the archive" box</td><td>Inline marginalia + errata</td><td>Editorial, credible, bold</td></tr>
+      <tr><td>Stop.</td><td>One experience at a time</td><td>Steps: Try → Inside → Ancestor → Behind</td><td>Its own step</td><td>Bottom line on every Behind step</td><td>Experiential, a practice not a read</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="notes">
+    <p class="eyebrow" style="margin-bottom:10px">Notes</p>
+    <ul>
+      <li>All five read from one shared file, <code>data.js</code>, generated from <code>data/site-data.json</code>, plus the navigation edges, limits and field notes from the markdown docs. Nothing is invented copy except the narrator thoughts in Stop.</li>
+      <li>The content's guardrails are kept everywhere: Angelo isn't framed as a neuroscience teacher, every Dōgen quote carries its translator, and "correlation, not causation" appears next to the science.</li>
+      <li>The pieces mix well: the Two Sides oscilloscopes could sit on the back of the Constellation cards, and the Stop slider could live on any of them.</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
