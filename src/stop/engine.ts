@@ -47,8 +47,9 @@ export function mountStop(): () => void {
     if (!timing && Math.random() > 1 - B * .95) return // during a sit, thoughts keep returning at their usual pace
     const s = document.createElement('span')
     s.textContent = THOUGHTS[Math.floor(Math.random() * THOUGHTS.length)]
-    if (innerWidth < 700) { s.style.left = Math.random() * 55 + '%'; s.style.top = (62 + Math.random() * 16) + '%' } else { s.style.left = (Math.random() < .5 ? Math.random() * 20 : 70 + Math.random() * 18) + '%'; s.style.top = (8 + Math.random() * 68) + '%' }
-    s.style.fontSize = (14 + Math.random() * 14) + 'px'
+    // anywhere on the screen above the river, faint and behind everything else
+    s.style.left = (Math.random() * (innerWidth < 700 ? 60 : 82)) + '%'; s.style.top = (4 + Math.random() * 72) + '%'
+    s.style.fontSize = (13 + Math.random() * 19) + 'px'
     s.style.setProperty('--dx', (Math.random() * 120 - 60) + 'px'); s.style.setProperty('--dy', (Math.random() * -80 - 20) + 'px')
     chatter.appendChild(s); live.push(s)
     frame(() => frame(() => s.classList.add('in')))
