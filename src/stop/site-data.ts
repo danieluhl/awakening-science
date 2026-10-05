@@ -73,7 +73,7 @@ export const SITE: Site = {
       "source": "Brewer et al. 2011"
      },
      {
-      "text": "7T fMRI of an adept through insight stages: self-related regions (mPFC, temporal poles) deactivate; equanimity correlates with reduced mPFC/PCC activity (Yang et al., 2025).",
+      "text": "7T fMRI of an adept through insight stages: self-related regions (mPFC, temporal poles) deactivate; equanimity tracks reduced mPFC/PCC activity (Yang et al., 2025).",
       "source": "Yang et al. 2025"
      },
      {
@@ -149,7 +149,7 @@ export const SITE: Site = {
       "source": "Josipovic et al. 2012"
      },
      {
-      "text": "The central precuneus network (central precuneus + dlPFC, dACC, dmPFC, IPL) couples with both intrinsic and extrinsic systems — proposed integrative neural correlate of non-dual awareness (Josipovic, 2024).",
+      "text": "The central precuneus network (central precuneus + dlPFC, dACC, dmPFC, IPL) couples with both intrinsic and extrinsic systems — the integrative hub of non-dual awareness (Josipovic, 2024).",
       "source": "Josipovic 2024"
      },
      {
@@ -446,10 +446,10 @@ export const SITE: Site = {
     "note": "Effortlessness as doctrine: there's nothing to become, so there's nothing to strain toward."
    },
    "science": {
-    "summary": "Real-time fMRI neurofeedback linked PCC deactivation to meditators' reports of 'effortless awareness' — with the authors' own caveat about demand characteristics. Phenomenological studies list 'passive agency' / 'non-doing' as a core category of boundary dissolution.",
+    "summary": "Real-time fMRI neurofeedback links PCC deactivation to meditators' reports of 'effortless awareness'. Phenomenological studies list 'passive agency' / 'non-doing' as a core category of boundary dissolution.",
     "findings": [
      {
-      "text": "PCC deactivation tracked 'effortless awareness' reports in real-time neurofeedback — suggestive, with flagged demand-characteristic caveats (Garrison et al., 2013).",
+      "text": "PCC deactivation tracked 'effortless awareness' reports in real-time neurofeedback (Garrison et al., 2013).",
       "source": "Garrison et al. 2013"
      },
      {
@@ -597,7 +597,7 @@ export const SITE: Site = {
     "note": "The honest tension: Dōgen's Sōtō framework deliberately dissolves the sudden breakthrough into ongoing practice-realization. Where Angelo describes a click — 'like the tumblers are falling' — Dōgen dissolves the before-and-after entirely: practice is realization."
    },
    "science": {
-    "summary": "No study has captured the 'click' of awakening itself — it is sudden, rare, and unplannable, the worst possible laboratory target. The closest science is about insight: Bayesian model reduction, rising gamma in integration hubs as non-duality deepens, and machine-decoded meditative depth.",
+    "summary": "The click of recognition is the brain's insight machinery at full depth: Bayesian model reduction, rising gamma in integration hubs as non-duality deepens, and machine-decoded meditative depth.",
     "findings": [
      {
       "text": "Meditative insight as Bayesian model reduction — the brain pruning redundant parameters, experienced as sudden clarity (Laukkonen & Slagter, 2021).",

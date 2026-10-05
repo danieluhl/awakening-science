@@ -219,9 +219,8 @@ export function mountStop(): () => void {
     <h3 id="realTitle">${esc(r.head)}</h3>
     ${r.body.map((p) => `<p>${esc(p)}</p>`).join('')}
     <div class="guess">${esc(r.guess)}</div>
-    ${r.caveat ? `<p class="caveat">${esc(r.caveat)}</p>` : ''}
     <ol>${r.sources.map(([t, u, d]) => `<li>${u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)} ↗</a>` : `<b>${esc(t)}</b>`}<span>${esc(d)}</span></li>`).join('')}</ol>
-    <p class="fine">Every study here is correlational. It shows what tends to happen in the brain alongside these experiences, not that the brain produces them. ${esc(S.bottom_line)}</p>
+    <p class="fine">${esc(S.bottom_line)}</p>
     <button class="back" data-close>Back to the experience</button></div>`
     // the experience fades away first, then the card rises into the empty space
     stage.classList.add('fade')
