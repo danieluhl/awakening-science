@@ -73,13 +73,16 @@ body{color:var(--ink);font-family:Manrope,sans-serif;font-weight:300;overflow:hi
 .focus .chrome,.focus .exp .kick,.focus .exp h2,.focus .exp .sub,.focus .stepnav{opacity:.04!important;transition:opacity 2s}
 .stepnav.chrome{opacity:calc(.72 + (1 - var(--being)) * .28)}
 .step{transition:opacity 1.4s ease,transform 1.4s ease,filter 1.4s ease!important}
-.timer{display:inline-block;margin-top:26px;border:0;background:none;padding:6px 2px;cursor:pointer;color:var(--ink);
-  font-family:'EB Garamond';font-style:italic;font-size:clamp(22px,2.6vw,30px);letter-spacing:.04em;position:relative;transition:opacity 1.6s ease}
-.timer::after{content:"";position:absolute;left:30%;right:30%;bottom:2px;height:1px;background:currentColor;opacity:.35;transition:opacity 1.2s ease,left 1.2s ease,right 1.2s ease}
-.timer:hover::after,.timer:focus-visible::after{left:0;right:0;opacity:.6}
+.timer{display:inline-block;margin-top:28px;border:0;background:none;padding:14px 34px;border-radius:40px;cursor:pointer;color:var(--ink);
+  font-family:'EB Garamond';font-style:italic;font-size:clamp(21px,2.4vw,26px);letter-spacing:.03em;position:relative;isolation:isolate;transition:opacity 1.6s ease}
+/* the glass lives on its own layer so it can fade away without anything changing size */
+.timer::before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;
+  border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.22);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  box-shadow:0 18px 40px -22px rgba(43,39,48,.35),inset 0 1px 0 rgba(255,255,255,.7);transition:opacity 1.6s ease,background .8s ease,box-shadow .8s ease}
+.timer:hover::before,.timer:focus-visible::before{background:rgba(255,255,255,.4);box-shadow:0 22px 50px -22px rgba(43,39,48,.42),inset 0 1px 0 rgba(255,255,255,.85)}
 .timer:focus-visible{outline:none}
 .timer.sitting{cursor:default}
-.timer.sitting::after{opacity:0}
+.timer.sitting::before{opacity:0}
 .timer.sitting #tl{animation:hum 7s ease-in-out 1.2s infinite}
 @keyframes hum{50%{opacity:.62}}
 .timer.gone{opacity:0;pointer-events:none}

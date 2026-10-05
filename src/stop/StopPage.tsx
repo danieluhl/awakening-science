@@ -44,12 +44,12 @@ export function StopPage() {
       </div>
 
       <main className="stage" id="stage" aria-live="polite" />
-      <button type="button" className="edge prev" id="edgePrev" aria-label="Previous experience">
+      <button type="button" className="edge prev" id="edgePrev" aria-label="Previous">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M15 4.5 7.5 12 15 19.5" />
         </svg>
       </button>
-      <button type="button" className="edge next" id="edgeNext" aria-label="Next experience">
+      <button type="button" className="edge next" id="edgeNext" aria-label="Next">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M9 4.5 16.5 12 9 19.5" />
         </svg>

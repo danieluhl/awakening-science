@@ -117,7 +117,7 @@ export function mountStop(): () => void {
   function changeExp(i: number, s: number) {
     if (swapping || timing) return; swapping = true; cancel(pauseT); document.body.classList.remove('edges-on')
     stage.classList.add('fade')
-    later(() => { cur = i; step = s; render(); stage.scrollTop = 0; frame(() => frame(() => { stage.classList.remove('fade'); swapping = false })) }, 1700)
+    later(() => { cur = i; step = s; if (s > 0) done.add(i); render(); stage.scrollTop = 0; later(() => { stage.classList.remove('fade'); swapping = false }, 60) }, 1700)
   }
 
   on('keydown', (e) => {
@@ -125,8 +125,7 @@ export function mountStop(): () => void {
     if (!done.has(cur)) return
     if (e.key === 'Escape') closeReal()
     if (real.classList.contains('open')) return
-    if (e.key === 'ArrowRight') changeExp((cur + 1) % X.length, 0); if (e.key === 'ArrowLeft') changeExp((cur + X.length - 1) % X.length, 0)
-    if (e.key === 'ArrowDown') next(); if (e.key === 'ArrowUp') prev()
+    if (e.key === 'ArrowRight') next(); if (e.key === 'ArrowLeft') prev()
   })
   function next() { if (step < 3) setStep(step + 1); else changeExp((cur + 1) % X.length, 0) }
   function prev() { if (step > 0) setStep(step - 1); else changeExp((cur + X.length - 1) % X.length, 3) }
@@ -177,8 +176,8 @@ export function mountStop(): () => void {
   }
   // the edge circles appear only once this experience's Try is done, after a quiet moment
   function showEdges() { cancel(pauseT); document.body.classList.remove('edges-on'); if (done.has(cur)) pauseT = later(() => document.body.classList.add('edges-on'), 3000) }
-  $('edgePrev').onclick = () => changeExp((cur + X.length - 1) % X.length, 0)
-  $('edgeNext').onclick = () => changeExp((cur + 1) % X.length, 0)
+  $('edgePrev').onclick = prev
+  $('edgeNext').onclick = next
 
   function unlock() { done.add(cur); const n = document.getElementById('stepnav'); if (n) n.classList.remove('locked'); showEdges() }
 
