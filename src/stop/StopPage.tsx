@@ -21,7 +21,12 @@ export function StopPage() {
       <div className="chatter" id="chatter" aria-hidden="true" />
 
       <div className="top">
-        <span className="brand chrome">Unbound</span>
+        <a className="brand chrome" href="/" data-deeper>
+          Unbound
+        </a>
+        <a className="deeper" id="deeper" href="/sit" data-deeper>
+          How to sit
+        </a>
         <span className="chrome" id="where" />
       </div>
 

@@ -126,7 +126,7 @@ export function mountStop(): () => void {
   function changeExp(i: number, s: number) {
     if (swapping || timing) return; swapping = true; cancel(pauseT); document.body.classList.remove('edges-on')
     stage.classList.add('fade')
-    later(() => { cur = i; step = s; if (s > 0) done.add(i); render(); stage.scrollTop = 0; later(() => { stage.classList.remove('fade'); swapping = false }, 60) }, 1700)
+    later(() => { cur = i; step = s; if (s > 0) done.add(i); offerDeeper(); render(); stage.scrollTop = 0; later(() => { stage.classList.remove('fade'); swapping = false }, 60) }, 1700)
   }
 
   on('keydown', (e) => {
@@ -160,10 +160,11 @@ export function mountStop(): () => void {
       <div class="step"><p class="body">${esc(e.science.summary)}</p>
         <div class="regions">${regions.map((r) => `<span>${esc(r.name)}</span>`).join('')}</div>
         <ul class="findings">${e.science.findings.slice(0, 3).map((f) => `<li>${esc(f.text)}</li>`).join('')}</ul>
-        <p class="honest">${esc(S.bottom_line)}</p></div>
+        <p class="honest">${esc(S.bottom_line)}</p>
+        ${cur === X.length - 1 ? `<a class="deeper-invite" href="/sit" data-deeper>One level deeper: how to sit<span aria-hidden="true"> →</span></a>` : ''}</div>
     </div>
     <nav class="stepnav chrome ${done.has(cur) ? '' : 'locked'}" id="stepnav" aria-label="Steps">
-      ${STEPS.map((s, i) => `<button class="w" data-s="${i}">${s}</button>`).join('')}
+      ${STEPS.map((s, i) => `<button class="w" data-s="${i}">${s}</button>`).join('')}<span class="bar" aria-hidden="true"></span>
     </nav>
   </div>`
     stage.querySelectorAll<HTMLButtonElement>('.stepnav .w').forEach((b) => { b.onclick = () => setStep(+(b.dataset.s as string)) })
@@ -182,19 +183,39 @@ export function mountStop(): () => void {
     steps.forEach((el) => el.classList.remove('on'))
     const tok = ++stepTok; later(() => { if (tok === stepTok) steps[s].classList.add('on') }, wasOn ? 1000 : 0)
     stage.querySelectorAll('.stepnav .w').forEach((b, i) => b.classList.toggle('on', i === s))
+    placeBar()
   }
+  // slide the underline to the current word (placed instantly the first time, then glides)
+  function placeBar() {
+    const nav = document.getElementById('stepnav'), bar = nav?.querySelector<HTMLElement>('.bar'), on = nav?.querySelector<HTMLElement>('.w.on')
+    if (!nav || !bar || !on) return
+    bar.style.left = on.offsetLeft + 'px'; bar.style.width = on.offsetWidth + 'px'; bar.style.top = (on.offsetTop + on.offsetHeight - 1) + 'px'; bar.style.bottom = 'auto'
+    if (!nav.classList.contains('sliding')) { nav.classList.add('sliding'); frame(() => frame(() => bar.classList.add('glide'))) }
+  }
+  on('resize', placeBar)
   // the edge circles appear only once this experience's Try is done, after a quiet moment
   function showEdges() { cancel(pauseT); document.body.classList.remove('edges-on'); if (done.has(cur)) pauseT = later(() => document.body.classList.add('edges-on'), 3000) }
   $('edgePrev').onclick = prev
   $('edgeNext').onclick = next
 
-  function unlock() { done.add(cur); const n = document.getElementById('stepnav'); if (n) n.classList.remove('locked'); showEdges() }
+  // once a few experiences have been lived through, "How to sit" quietly appears in the top bar
+  function offerDeeper() { if (done.size >= 3) document.body.classList.add('deeper-on') }
+  // leaving for the picture book: the whole page fades before the next one loads
+  document.addEventListener('click', onDeeper)
+  on('pageshow', () => document.body.classList.remove('leaving')) // back button: never return to a faded-out page
+  function onDeeper(e: MouseEvent) {
+    const a = (e.target as HTMLElement).closest('[data-deeper]') as HTMLAnchorElement | null
+    if (!a) return
+    e.preventDefault(); document.body.classList.add('leaving'); later(() => window.location.assign(a.href), 1300)
+  }
+
+  function unlock() { done.add(cur); offerDeeper(); const n = document.getElementById('stepnav'); if (n) n.classList.remove('locked'); showEdges() }
 
   // guided minute: the river resets to the middle, then drifts toward Being on its own
   function runTimer() {
     const tl = $('tl'), tb = $('timer'), halo = orbHalo
     if (timing) return; tb.onclick = null; tb.classList.add('sitting'); tb.setAttribute('aria-disabled', 'true'); tb.tabIndex = -1
-    timing = true; clearThoughts(); document.body.classList.add('focus', 'sitting')
+    timing = true; root.style.setProperty('--quiet', '0'); clearThoughts(); document.body.classList.add('focus', 'sitting')
     tl.classList.add('hush'); later(() => { tl.textContent = 'Just this'; tl.classList.remove('hush') }, 1250)
     // the glow slips away, reappears at the midpoint, then begins
     halo.style.opacity = '0'
@@ -205,6 +226,9 @@ export function mountStop(): () => void {
         if (!timing) return; const p = Math.min(1, (now - start) / D)
         const e = p * p * (3 - 2 * p) // eases in, eases out, spans the whole minute
         setBeing(.5 + .5 * e)
+        // over the last ~20 seconds the background thoughts fade away completely
+        // (finishing a touch early, since the opacity eases toward each new value)
+        root.style.setProperty('--quiet', String(Math.max(0, Math.min(1, (now - start - 38000) / 17000))))
         if (p < 1) frame(loop); else finish()
       }
       frame(loop)
@@ -252,7 +276,8 @@ export function mountStop(): () => void {
     cancelAnimationFrame(raf)
     for (const off of offs) off()
     for (const el of [river, hold, real, $('edgePrev'), $('edgeNext')]) { el.onpointerdown = el.onpointermove = el.onpointerup = el.onpointerleave = null; el.onkeydown = el.onclick = null }
-    document.body.classList.remove('entered', 'edges-on', 'focus', 'sitting', 'real-open')
-    for (const p of ['--being', '--a', '--b', '--c']) root.style.removeProperty(p)
+    document.removeEventListener('click', onDeeper)
+    document.body.classList.remove('entered', 'edges-on', 'focus', 'sitting', 'real-open', 'deeper-on', 'leaving')
+    for (const p of ['--being', '--quiet', '--a', '--b', '--c']) root.style.removeProperty(p)
   }
 }

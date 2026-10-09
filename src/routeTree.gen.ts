@@ -10,33 +10,63 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as OxRouteImport } from './routes/ox'
+import { Route as SitRouteImport } from './routes/sit'
+import { Route as StopRouteImport } from './routes/stop'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OxRoute = OxRouteImport.update({
+  id: '/ox',
+  path: '/ox',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitRoute = SitRouteImport.update({
+  id: '/sit',
+  path: '/sit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StopRoute = StopRouteImport.update({
+  id: '/stop',
+  path: '/stop',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ox': typeof OxRoute
+  '/sit': typeof SitRoute
+  '/stop': typeof StopRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ox': typeof OxRoute
+  '/sit': typeof SitRoute
+  '/stop': typeof StopRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ox': typeof OxRoute
+  '/sit': typeof SitRoute
+  '/stop': typeof StopRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/ox' | '/sit' | '/stop'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/ox' | '/sit' | '/stop'
+  id: '__root__' | '/' | '/ox' | '/sit' | '/stop'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  OxRoute: typeof OxRoute
+  SitRoute: typeof SitRoute
+  StopRoute: typeof StopRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +78,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ox': {
+      id: '/ox'
+      path: '/ox'
+      fullPath: '/ox'
+      preLoaderRoute: typeof OxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sit': {
+      id: '/sit'
+      path: '/sit'
+      fullPath: '/sit'
+      preLoaderRoute: typeof SitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stop': {
+      id: '/stop'
+      path: '/stop'
+      fullPath: '/stop'
+      preLoaderRoute: typeof StopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  OxRoute: OxRoute,
+  SitRoute: SitRoute,
+  StopRoute: StopRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

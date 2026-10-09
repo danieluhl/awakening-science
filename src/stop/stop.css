@@ -15,7 +15,8 @@ body{color:var(--ink);font-family:Manrope,sans-serif;font-weight:300;overflow:hi
 
 /* chatter: the narrator */
 .chatter{position:fixed;inset:0;z-index:2;pointer-events:none;overflow:hidden;opacity:calc(1 - var(--being));transition:opacity 3s ease}
-.sitting .chatter{opacity:calc(.3 + (1 - var(--being)) * .7)}
+/* in the last stretch of a sit the thoughts thin out to nothing (--quiet runs 0 → 1) */
+.sitting .chatter{opacity:calc((.3 + (1 - var(--being)) * .7) * (1 - var(--quiet, 0)))}
 .chatter span{position:absolute;font-family:'EB Garamond';font-style:italic;color:var(--soft);white-space:nowrap;filter:blur(.3px);opacity:0;transition:opacity 3s ease,transform 60s linear}
 .chatter span.in{opacity:.32;transform:translate(var(--dx),var(--dy))}
 .chatter span.out{opacity:0!important;transition:opacity 5s ease,transform 60s linear}
@@ -24,7 +25,7 @@ body{color:var(--ink);font-family:Manrope,sans-serif;font-weight:300;overflow:hi
 /* chrome that dissolves */
 .chrome{opacity:calc(.12 + (1 - var(--being)) * .88);transition:opacity 2s ease}
 .top{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:20px clamp(16px,3vw,36px);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
-.top .brand{font-family:'EB Garamond';font-size:20px;letter-spacing:.02em;text-transform:none}
+.top .brand{font-family:'EB Garamond';font-size:20px;letter-spacing:.02em;text-transform:none;color:var(--ink);text-decoration:none}
 
 /* the river: a full-width Me-ing ↔ Being scale */
 .river{position:fixed;left:0;right:0;bottom:0;height:var(--band);z-index:12;cursor:ew-resize;touch-action:none;outline:none;opacity:0;transition:opacity 3s ease 1.6s}
@@ -150,6 +151,12 @@ body{color:var(--ink);font-family:Manrope,sans-serif;font-weight:300;overflow:hi
 .stepnav .w{border:0;background:none;font:inherit;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:8px 12px;color:var(--soft);cursor:pointer;border-bottom:1px solid transparent;transition:color .4s}
 .stepnav .w.on{color:var(--ink);border-bottom-color:var(--ink)}
 .stepnav .w:hover{color:var(--ink)}
+/* the underline glides from word to word; kept under Reduce Motion because it is a small, slow move */
+.stepnav{position:relative}
+.stepnav .w{transition:color .4s,border-bottom-color .9s ease}
+.stepnav .bar{position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--ink);pointer-events:none}
+.stepnav .bar.glide{transition:left .9s cubic-bezier(.4,0,.2,1),width .9s cubic-bezier(.4,0,.2,1)}
+.stepnav.sliding .w.on{border-bottom-color:transparent}
 /* previous / next experience: soft glass circles at the edges */
 .edge{position:fixed;top:calc((100vh - var(--band)) / 2);transform:translateY(-50%);z-index:11;width:72px;height:72px;border-radius:50%;
   border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.16);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
@@ -187,3 +194,13 @@ body{color:var(--ink);font-family:Manrope,sans-serif;font-weight:300;overflow:hi
 
 /* the starter theme's decorative body layers sit underneath the Stop page */
 body::before,body::after{content:none}
+
+/* "How to sit": the way one level deeper, offered once a few experiences have been lived through */
+.top .deeper{margin-left:auto;margin-right:clamp(18px,2.4vw,30px);color:var(--ink);text-decoration:none;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  border-bottom:1px solid rgba(43,39,48,.28);padding-bottom:3px;opacity:0;visibility:hidden;transition:opacity 2.4s ease,visibility 2.4s,border-color .8s ease}
+.deeper-on .top .deeper{opacity:.8;visibility:visible}
+.top .deeper:hover,.top .deeper:focus-visible{border-color:var(--ink);outline:none}
+.focus .top .deeper{opacity:.04!important}
+.deeper-invite{display:inline-block;margin-top:26px;font-family:'EB Garamond';font-style:italic;font-size:21px;color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(43,39,48,.3);padding-bottom:2px;transition:border-color .8s ease}
+.deeper-invite:hover,.deeper-invite:focus-visible{border-color:var(--ink);outline:none}
+body.leaving{opacity:0;transition:opacity 1.2s ease}

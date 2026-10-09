@@ -1,0 +1,42 @@
+/* The picture-book plates' slow life, shared by the book and the front page (see scenes.tsx) */
+.sp-spin{transform-box:fill-box;transform-origin:center!important;animation:sp-spin 160s linear infinite}
+.sp-spin-r{transform-box:fill-box;transform-origin:center!important;animation:sp-spin 160s linear infinite reverse}
+@keyframes sp-spin{to{transform:rotate(360deg)}}
+.sp-breathe{transform-box:fill-box;transform-origin:center!important;animation:sp-breathe 8s ease-in-out infinite}
+@keyframes sp-breathe{0%,100%{transform:scale(.86)}50%{transform:scale(1.08)}}
+@keyframes sp-breathe-o{0%,100%{opacity:.55}50%{opacity:1}}
+.sp-glow{animation:sp-glow 7s ease-in-out infinite}
+@keyframes sp-glow{0%,100%{opacity:1}50%{opacity:.62}}
+.sp-tw{animation:sp-tw 4.4s ease-in-out infinite}
+@keyframes sp-tw{0%,100%{opacity:.3}50%{opacity:1}}
+.sp-drift{animation:sp-drift 22s ease-in-out infinite alternate}
+@keyframes sp-drift{to{transform:translate(16px,-6px)}}
+.sp-drift-l{animation:sp-drift-l 26s ease-in-out infinite alternate}
+@keyframes sp-drift-l{to{transform:translateX(-34px)}}
+.sp-drift-r{animation:sp-drift-r 26s ease-in-out infinite alternate}
+@keyframes sp-drift-r{to{transform:translateX(34px)}}
+.sp-rise{animation:sp-rise 14s ease-in-out infinite}
+@keyframes sp-rise{0%{transform:translateY(10px);opacity:0}25%{opacity:1}75%{opacity:.8}100%{transform:translateY(-40px);opacity:0}}
+.sp-flow{animation:sp-flow 3s linear infinite}
+@keyframes sp-flow{to{stroke-dashoffset:-26}}
+/* arrivals in sequence: opacity only, so they keep their rhythm under Reduce Motion */
+.sp-count{opacity:0;animation:sp-count 12s ease-in-out infinite}
+@keyframes sp-count{0%{opacity:0}3%{opacity:1}11%{opacity:.15}100%{opacity:0}}
+.sp-ring{opacity:0;animation:sp-ring 3.6s ease-out infinite}
+@keyframes sp-ring{0%{opacity:0}25%{opacity:.9}100%{opacity:0}}
+.sp-scan{opacity:0;animation:sp-scan 6.6s ease-in-out infinite}
+@keyframes sp-scan{0%{opacity:0}8%{opacity:.75}24%{opacity:0}100%{opacity:0}}
+.sp-step{opacity:0;animation:sp-step 6.6s ease-in-out infinite}
+@keyframes sp-step{0%{opacity:0}10%{opacity:1}70%{opacity:1}90%{opacity:0}100%{opacity:0}}
+.sp-arise{opacity:0;animation:sp-arise 11.2s ease-in-out infinite}
+@keyframes sp-arise{0%{opacity:0}12%{opacity:1}42%{opacity:1}58%{opacity:0}100%{opacity:0}}
+/* the ensō draws itself once, each time its page opens */
+.sp-draw{stroke-dasharray:100;stroke-dashoffset:100;animation:sp-draw 3.2s cubic-bezier(.5,0,.2,1) .6s forwards}
+@keyframes sp-draw{to{stroke-dashoffset:0}}
+
+/* Reduce Motion: keep every fade and glow, hold back what moves */
+@media (prefers-reduced-motion:reduce){
+  .sp-spin,.sp-spin-r,.sp-drift,.sp-drift-l,.sp-drift-r,.sp-flow{animation:none}
+  .sp-breathe{animation:sp-breathe-o 8s ease-in-out infinite}
+  .sp-rise{animation:sp-tw 6s ease-in-out infinite}
+}

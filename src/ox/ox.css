@@ -1,0 +1,35 @@
+/* "The ox and the herder": the How to sit book's page (sit.css), with words set as a verse */
+.ox .chapter{margin-bottom:10px}
+.ox .chapter span{margin-right:8px}
+.ox .stage{font-family:'EB Garamond';font-weight:400;font-size:clamp(30px,3.4vw,46px);line-height:1.08;letter-spacing:-.01em;margin-bottom:16px;text-wrap:balance}
+.ox .verse{font-family:'EB Garamond';font-style:italic;font-size:clamp(18px,1.7vw,23px);line-height:1.5;color:var(--ink)}
+.ox .verse span{display:block;text-wrap:balance}
+.ox .verse span+span{margin-top:.25em}
+.ox .credit{max-width:44ch;margin-left:auto;margin-right:auto;line-height:1.6}
+
+/* ten quiet marks instead of four named chapters */
+.ox .stages{gap:clamp(6px,1.2vw,14px)}
+.ox .stages button{flex:0 1 54px}
+.ox .stages .name{font-family:'EB Garamond';font-size:13px;letter-spacing:.06em;text-transform:none}
+.ox .stages button.done .name{opacity:.85}
+
+@media (min-width:960px) and (min-aspect-ratio:5/4){
+  .ox .words{max-width:40ch;flex-basis:40ch}
+  .ox .credit{margin-left:0}
+  /* a wrapped verse line tucks in under its first words */
+  .ox .verse span{text-wrap:pretty;padding-left:1.1em;text-indent:-1.1em}
+}
+
+@media (max-width:700px){
+  .ox .plate{width:min(40vh,78vw)}
+  .ox .stages .name{display:block;font-size:11px}
+  .ox .stages button.on .name{position:static}
+}
+
+/* the withered tree comes into flower once, each time its page opens: opacity only */
+.ox-bloom{opacity:0;animation:ox-bloom 2.6s ease forwards}
+@keyframes ox-bloom{to{opacity:1}}
+/* the ox's tail swings now and then */
+.ox-swish{transform-box:view-box;animation:ox-swish 9s ease-in-out infinite}
+@keyframes ox-swish{0%,70%,100%{transform:rotate(0)}78%{transform:rotate(9deg)}86%{transform:rotate(-4deg)}}
+@media (prefers-reduced-motion:reduce){.ox-swish{animation:none}}
