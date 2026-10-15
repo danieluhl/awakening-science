@@ -1,0 +1,61 @@
+/* Dan's notes: the How to sit book's page (sit.css), set for reading longer prose.
+   Every page is one column: a small plate, the chapter's title, then its words, scrolling when they run long. */
+.insights .spread,.insights .spread:focus{outline:none}
+@media (min-width:960px) and (min-aspect-ratio:5/4){
+  .insights .spread:not(.cover){flex-direction:column;align-items:center;justify-content:flex-start;gap:clamp(14px,3vh,30px);padding:72px clamp(90px,9vw,140px) 110px}
+  .insights .spread:not(.cover) .words{text-align:center;flex:none}
+  .insights .words .ends{justify-content:center}
+  /* the cover opens like the other books: the plate beside the title */
+  .insights .cover .plate{width:min(56vh,36vw,560px)}
+  .insights .cover .words{text-align:left;max-width:44ch;flex:0 1 44ch}
+  .insights .cover .lede p{margin:0}
+}
+.insights .plate{width:min(30vh,56vw,280px)}
+.insights .words{max-width:640px;width:100%;min-height:0;text-align:center}
+
+/* the cover: the title and Dan's opening words */
+.insights .words h1{font-size:clamp(46px,6vw,84px);text-wrap:balance}
+.insights .lede p{max-width:46ch;margin:0 auto}
+.insights .lede p+p{margin-top:.7em}
+
+/* a chapter */
+.insights .chapter{margin-bottom:12px;color:var(--soft);letter-spacing:.22em}
+.insights .chapter span{color:var(--ink)}
+.insights .stage{font-family:'EB Garamond';font-weight:400;font-size:clamp(32px,3.8vw,50px);line-height:1.08;letter-spacing:-.01em;margin-bottom:clamp(20px,3vh,30px);text-wrap:balance}
+.insights .prose{text-align:left;font-family:'EB Garamond';font-size:clamp(19px,1.6vw,21px);line-height:1.62;color:var(--ink);text-wrap:pretty;
+  padding:clamp(22px,3.5vw,40px) clamp(20px,4vw,44px);border-radius:28px;position:relative;isolation:isolate}
+/* the words rest on a soft pane of glass, so long reading stays easy over the drifting colour */
+.insights .prose::before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;
+  background:linear-gradient(160deg,rgba(255,255,255,.4),rgba(255,250,240,.18) 60%,rgba(240,232,255,.22));
+  backdrop-filter:blur(16px) saturate(1.15);-webkit-backdrop-filter:blur(16px) saturate(1.15);
+  border:1px solid rgba(255,255,255,.55);box-shadow:0 30px 70px -40px rgba(43,39,48,.32),inset 0 1px 0 rgba(255,255,255,.7)}
+.insights .prose p+p,.insights .prose p+ol,.insights .prose p+ul,.insights .prose ol+p,.insights .prose ul+p,.insights .prose blockquote+p,.insights .prose p+blockquote{margin-top:.85em}
+.insights .prose h3{font-family:'EB Garamond';font-weight:400;font-style:italic;font-size:clamp(25px,2.2vw,30px);line-height:1.2;margin:1.5em 0 .45em}
+.insights .prose h3:first-child{margin-top:0}
+.insights .prose h4{font-family:Manrope,sans-serif;font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--soft);margin:1.6em 0 .6em}
+.insights .prose ol,.insights .prose ul{padding-left:1.4em;margin-top:.85em}
+.insights .prose li{padding-left:.3em}
+.insights .prose li+li{margin-top:.75em}
+.insights .prose li>p+p{margin-top:.7em}
+.insights .prose li::marker{color:var(--soft);font-style:italic}
+.insights .prose em{font-style:italic}
+.insights .prose strong{font-weight:500}
+.insights .prose blockquote{font-style:italic;color:var(--soft);padding-left:1em;border-left:1px solid rgba(43,39,48,.2)}
+.insights .prose code{font-family:inherit;font-style:italic}
+.insights .prose a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(43,39,48,.3);transition:border-color .8s ease}
+.insights .prose a:hover{border-color:var(--ink)}
+.insights .words .line{margin-top:4px}
+
+/* a quiet numbered mark for each chapter, as the ox book has for its stages */
+.insights .stages{gap:clamp(6px,1.2vw,14px)}
+.insights .stages button{flex:0 1 54px}
+.insights .stages .name{font-family:'EB Garamond';font-size:13px;letter-spacing:.06em;text-transform:none}
+.insights .stages button.done .name{opacity:.85}
+
+@media (max-width:700px){
+  .insights .plate{width:min(26vh,52vw)}
+  .insights .prose{padding:22px 18px;border-radius:22px;font-size:18px}
+  .insights .prose ol,.insights .prose ul{padding-left:1.1em}
+  .insights .stages .name{display:block;font-size:11px}
+  .insights .stages button.on .name{position:static}
+}

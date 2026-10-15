@@ -3,7 +3,7 @@ import { OX_SCENES } from '../ox/scenes'
 import { NIGHT } from '../ox/stages'
 import { PALETTES, Plate } from '../sit/scenes'
 
-// The front door: what Unbound is, and three ways in.
+// The front door: what Unbound is, and four ways in.
 // Leaving fades the whole page before the next one loads, as everywhere else on the site.
 function leaveTo(e: React.MouseEvent<HTMLAnchorElement>) {
   e.preventDefault()
@@ -50,7 +50,7 @@ export function HomePage() {
         </p>
       </header>
 
-      <nav className="doors" aria-label="Three ways in">
+      <nav className="doors" aria-label="Four ways in">
         <a className="door" href="/stop" onClick={leaveTo}>
           <span className="art">
             <Plate scene="passing-clouds" p={PALETTES.sit} u={`${u}a`} label="A figure sitting still as clouds pass" />
@@ -67,7 +67,7 @@ export function HomePage() {
           <span className="kick">A picture book</span>
           <span className="name">How to sit</span>
           <span className="desc">The basic practice, one picture at a time: posture, the breath, and carrying it through your day.</span>
-          <span className="go">Open the book</span>
+          <span className="go">Take me there</span>
         </a>
         <a className="door" href="/ox" onClick={leaveTo}>
           <span className="art">
@@ -76,7 +76,16 @@ export function HomePage() {
           <span className="kick">Ten pictures</span>
           <span className="name">The ox and the herder</span>
           <span className="desc">The old Zen story of the way home, in ten pictures and ten short poems: searching, finding, taming, forgetting, and coming back.</span>
-          <span className="go">Open the book</span>
+          <span className="go">Follow the tracks</span>
+        </a>
+        <a className="door" href="/insights" onClick={leaveTo}>
+          <span className="art">
+            <Plate scene="enso" p={PALETTES.sit} u={`${u}d`} label="An open circle drawn in one stroke" />
+          </span>
+          <span className="kick">In my own words</span>
+          <span className="name">Personal learnings</span>
+          <span className="desc">My own rough notes from practice: what it is, why we do it, and what changes downstream of it.</span>
+          <span className="go">Read the notes</span>
         </a>
       </nav>
 

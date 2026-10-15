@@ -26,6 +26,13 @@ body::before,body::after{content:none}
    The plate sits in the same place on every page, so the crossfade reads as one picture becoming the next. */
 .spread{position:fixed;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:clamp(14px,3vh,34px);padding:max(64px,9vh) clamp(16px,6vw,80px) 92px;pointer-events:none}
 .spread.on{pointer-events:auto}
+/* a page that is taller than the screen scrolls; its top and bottom melt away softly
+   before they reach the header and the arrows, instead of being cut off or sliding under them */
+.spread{--melt:84px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 36px,#000 62px,#000 calc(100% - var(--melt) - 30px),transparent calc(100% - var(--melt)));
+  mask-image:linear-gradient(to bottom,transparent 36px,#000 62px,#000 calc(100% - var(--melt) - 30px),transparent calc(100% - var(--melt)))}
+.spread::-webkit-scrollbar{display:none}
+.spread>*{flex-shrink:0}
 .spread .art{opacity:0;transition:opacity 1.6s cubic-bezier(.45,0,.55,1)}
 .spread.on .art{opacity:1}
 .spread .words{opacity:0;filter:blur(3px);transition:opacity .6s ease,filter .6s ease}
@@ -40,7 +47,7 @@ body::before,body::after{content:none}
 
 /* wide screens: the plate on the left, the words beside it, like an open book */
 @media (min-width:960px) and (min-aspect-ratio:5/4){
-  .spread{flex-direction:row;justify-content:center;gap:clamp(40px,6vw,96px);padding:72px clamp(90px,9vw,140px) 96px}
+  .spread{flex-direction:row;justify-content:center;gap:clamp(40px,6vw,96px);padding:72px clamp(90px,9vw,140px) 96px;align-items:safe center}
   .plate{width:min(64vh,42vw,640px)}
   .words{text-align:left;max-width:30ch;flex:0 0 30ch;min-height:0}
   .line{font-size:clamp(28px,2.4vw,38px)}
@@ -87,7 +94,8 @@ body::before,body::after{content:none}
 
 @media (max-width:700px){
   .edge{width:48px;height:48px;top:auto;bottom:70px;transform:none}.edge svg{width:16px;height:16px}
-  .spread{padding:64px 16px 130px}
+  .spread{padding:64px 16px 160px;--melt:122px}
+  .words{min-height:0}
   .chapters .name{display:none}
   .chapters button.on .name{display:block;position:absolute;bottom:22px;left:0;right:0}
   .chapters{bottom:16px}

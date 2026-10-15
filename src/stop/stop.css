@@ -102,6 +102,20 @@ body{color:var(--ink);font-family:Manrope,sans-serif;font-weight:300;overflow:hi
 /* once the sit begins, the button dissolves into plain words */
 .remain{font-family:'EB Garamond';font-style:italic;font-size:clamp(26px,3vw,36px);margin-top:-46px;opacity:0;transition:opacity 2.2s ease;pointer-events:none}
 .remain.show{opacity:1}
+/* the minute, barely there: a faint count under "Just this", and beneath it, on hover or tap, a quiet way out */
+.count{display:flex;flex-direction:column;align-items:center;gap:2px;margin:6px auto 0;width:max-content;padding:4px 18px 8px;opacity:0;visibility:hidden;transition:opacity 2.4s ease,visibility 2.4s}
+.count.show{opacity:1;visibility:visible}
+.count .secs{font-family:'EB Garamond';font-size:14px;letter-spacing:.14em;color:var(--soft);opacity:.42;font-variant-numeric:tabular-nums;cursor:default;transition:opacity 1.6s ease}
+.count .skip{border:0;background:none;font-family:'EB Garamond';font-style:italic;font-size:14px;letter-spacing:.03em;color:var(--soft);cursor:pointer;padding:2px 6px;
+  border-bottom:1px solid transparent;opacity:0;pointer-events:none;transition:opacity 1.8s ease,border-color .8s ease}
+.count.show.reveal .skip,.count.show:focus-within .skip{opacity:.62;pointer-events:auto}
+.count.show.reveal .secs,.count.show:focus-within .secs{opacity:.6}
+@media (hover:hover){
+  .count.show:hover .skip{opacity:.62;pointer-events:auto}
+  .count.show:hover .secs{opacity:.6}
+  .count .skip:hover{opacity:.85!important;border-bottom-color:rgba(43,39,48,.22)}
+}
+.count .skip:focus-visible{outline:none;opacity:.85;border-bottom-color:rgba(43,39,48,.22)}
 #orbHalo{transition:opacity 1.6s ease}
 .regions{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 18px}
 .regions span{font-size:12px;padding:6px 12px;border-radius:30px;background:rgba(255,255,255,.4)}

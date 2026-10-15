@@ -21,8 +21,8 @@ body::before,body::after{content:none}
 .intro p{font-size:16px;line-height:1.75;margin:0 auto 14px;max-width:58ch;text-wrap:pretty}
 .intro p:first-of-type{font-family:'EB Garamond';font-style:italic;font-size:clamp(20px,2vw,23px);line-height:1.5;color:var(--ink)}
 
-/* three ways in: soft glass doors, each with its own plate; they wrap, centred, on narrower screens */
-.doors{display:flex;flex-wrap:wrap;gap:clamp(16px,3vw,36px);margin-top:clamp(34px,6vh,60px);justify-content:center;width:100%;max-width:1160px}
+/* four ways in: soft glass doors, each with its own plate, two by two; they stack, centred, on narrower screens */
+.doors{display:flex;flex-wrap:wrap;gap:clamp(16px,3vw,36px);margin-top:clamp(34px,6vh,60px);justify-content:center;width:100%;max-width:780px}
 .door{flex:0 1 340px;position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;text-align:center;padding:30px 26px 30px;border-radius:28px;color:var(--ink);text-decoration:none}
 .door::before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;
   background:linear-gradient(150deg,rgba(255,255,255,.46),rgba(255,250,240,.2) 55%,rgba(232,224,255,.24));

@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as InsightsRouteImport } from './routes/insights'
 import { Route as OxRouteImport } from './routes/ox'
 import { Route as SitRouteImport } from './routes/sit'
 import { Route as StopRouteImport } from './routes/stop'
@@ -17,6 +18,11 @@ import { Route as StopRouteImport } from './routes/stop'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsightsRoute = InsightsRouteImport.update({
+  id: '/insights',
+  path: '/insights',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OxRoute = OxRouteImport.update({
@@ -37,12 +43,14 @@ const StopRoute = StopRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/insights': typeof InsightsRoute
   '/ox': typeof OxRoute
   '/sit': typeof SitRoute
   '/stop': typeof StopRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/insights': typeof InsightsRoute
   '/ox': typeof OxRoute
   '/sit': typeof SitRoute
   '/stop': typeof StopRoute
@@ -50,20 +58,22 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/insights': typeof InsightsRoute
   '/ox': typeof OxRoute
   '/sit': typeof SitRoute
   '/stop': typeof StopRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/ox' | '/sit' | '/stop'
+  fullPaths: '/' | '/insights' | '/ox' | '/sit' | '/stop'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/ox' | '/sit' | '/stop'
-  id: '__root__' | '/' | '/ox' | '/sit' | '/stop'
+  to: '/' | '/insights' | '/ox' | '/sit' | '/stop'
+  id: '__root__' | '/' | '/insights' | '/ox' | '/sit' | '/stop'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  InsightsRoute: typeof InsightsRoute
   OxRoute: typeof OxRoute
   SitRoute: typeof SitRoute
   StopRoute: typeof StopRoute
@@ -76,6 +86,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights': {
+      id: '/insights'
+      path: '/insights'
+      fullPath: '/insights'
+      preLoaderRoute: typeof InsightsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ox': {
@@ -104,6 +121,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  InsightsRoute: InsightsRoute,
   OxRoute: OxRoute,
   SitRoute: SitRoute,
   StopRoute: StopRoute,
